@@ -1,0 +1,13 @@
+.cargo
+.elixir_ls
+.git
+.terraform
+.venv
+.vscode
+__pycache__
+_build
+bin
+deps
+node_modules
+venv
+virtualenv

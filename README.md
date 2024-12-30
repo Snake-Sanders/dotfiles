@@ -6,6 +6,7 @@ Development Environment Configuration on MacOS
 brew install stow
 cd ~
 git clone git@github.com:Snake-Sanders/dotfiles.git
+cd dotfiles
 stow .
 ```
 

@@ -35,8 +35,8 @@ then add global configuration the following:
 
 ; This is the user I have for Work
 ; - WORK_DIR is not a git repo, but contains subfolders with git repos, that is 
-; why ends with /*/
-; - Sometimes the ~/ does not work so it might need the full path
+; why ends with /*/.
+; - Sometimes the ~/ does not work so it might need the full path.
 
 [includeIf "gitdir:/Users/MY_USER/src/WORK_DIR/*/"]
   path = /Users/MY_USER/src/WORK_DIR/.gitconfig

@@ -1,9 +1,13 @@
 # Git
 
-Configure your users in order to use different accounts for work and personal.
+If you have multiple git users, let's say one for work and one for personal 
+projects, you can configure Git to automatically pick the right user
+for commiting on each project.
 
-create this file:
-`/Users/mac/src/weavs.io/.gitconfig`
+create this git config file wherever is your folder for your profesional work
+projects, this file will be refrenced in the global configuration:
+
+`/Users/MY_USER/src/WORK/.gitconfig`
 
 ```
 [user]
@@ -11,24 +15,36 @@ create this file:
   email = my_user@company.com
 ```
 
-then in add the following in
+then add global configuration the following:
+
 `/Users/MY_USER/.gitconfig`
 
 ```
+; this is the default user
+
 [user]
 	name = Snake Sanders
-	email = elmarian22@gmail.com
+	email = email@gmail.com
 
-# Example for multi-user configuration
-# [includeIf "gitdir:~/Private/"]
-#     path = ~/Private/.gitconfig
+; If you want to add more users this is the format:
+; Uncomment and update accordingly.
 
-# This is the user I have for Work
-[includeIf "gitdir:~/src/WORK_DIR/"]
-  path = ~/src/WORK_DIR/.gitconfig
+; Example for multi-user configuration
+; [includeIf "gitdir:~/Private/"]
+     path = ~/Private/.gitconfig
+
+; This is the user I have for Work
+; - WORK_DIR is not a git repo, but contains subfolders with git repos, that is 
+; why ends with /*/
+; - Sometimes the ~/ does not work so it might need the full path
+
+[includeIf "gitdir:/Users/MY_USER/src/WORK_DIR/*/"]
+  path = /Users/MY_USER/src/WORK_DIR/.gitconfig
+
 ```
 
-To validate the configuration, close vscode, go to the project folder
+To validate the configuration, close vscode, go to the project folder and 
+check if the working user is picked up by git.
 
 - Check user name `git config user.name`
 - Check user email `git config user.email`

@@ -1186,7 +1186,7 @@ require('lazy').setup({
     },
     config = function()
       -- ctr + b = toggles file explorer tree
-      vim.keymap.set('n', '<C-b>', ':Neotree filesystem toggle right<CR>', {})
+      vim.keymap.set('n', '<leader>b', ':Neotree filesystem toggle right<CR>', {})
     end,
   },
   -- [[ end of custom plugins ]]

@@ -46,6 +46,7 @@ Key bindings:
 ** note r clashes with reload r **
 
 ref: https://github.com/tmux-plugins/tmux-resurrect
+
 ## Tmuxifier 
 
 (package not used at the moment)
@@ -55,8 +56,6 @@ allows creating sessions templates
 https://github.com/jimeh/tmuxifier
 
 `git clone git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
-
-
 
 ## Usage
 
@@ -81,3 +80,37 @@ or
 
 to reattach to the session:
 `tmux attach`
+
+## Keymaps troubleshooting
+
+There are two level of keymaps:
+
+`-T prefix` means the keybinding works after the tmux prefix.
+`-T root` means the keybinding works directly without prefix
+
+* Find who is using a keymap:
+
+This command will show where the `controle + p` binding is associated.
+
+`tmux list-keys -T root | grep C-p`
+
+* Find keymaps set by a module:
+
+To search for your module keybindings, example module `floax`:
+
+`tmux list-keys | grep floax`
+
+To make Ctrl + P work without needing the prefix:
+
+- `-n` means "no prefix required."
+- `run-shell` directly calls the plugin script.
+
+`bind -n C-p run-shell ~/.config/tmux/plugins/tmux-floax/scripts/floax.sh`
+
+Remember to reload the configuration after changing it, use `<leader> + I`.
+
+* Manual test:
+
+You can manually bind Ctrl + P to a test command to verify it's working:
+
+`tmux bind C-p display "Ctrl + P works!"`

@@ -386,6 +386,16 @@ require('lazy').setup({
     },
   },
 
+  -- NOTE: integration neovim with tmux navigation key binding
+  --
+  {
+    'christoomey/vim-tmux-navigator',
+    vim.keymap.set('n', 'C-h', 'TmuxNavigateLeft<CR>'),
+    vim.keymap.set('n', 'C-j', 'TmuxNavigateDown<CR>'),
+    vim.keymap.set('n', 'C-k', 'TmuxNavigateUp<CR>'),
+    vim.keymap.set('n', 'C-l', 'TmuxNavigateRight<CR>'),
+  },
+
   -- NOTE: Plugins can specify dependencies.
   --
   -- The dependencies are proper plugin specifications as well - anything

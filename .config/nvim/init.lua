@@ -708,10 +708,29 @@ require('lazy').setup({
           },
         },
 
+        -- elixir
         elixirls = {
           cmd = { '/Users/mac/src/github/elixir-ls/release/language_server.sh' },
           tiletypes = { 'elixir', 'eelixir', 'heex' },
           capabilities = capabilities,
+        },
+
+        -- Zig
+        zls = {
+          -- omit the following line if `zls` is in your PATH
+          cmd = { '/Users/mac/src/github/zls/zig-out/bin/zls' },
+          settings = {
+            zls = {
+              -- Whether to enable build-on-save diagnostics
+              --
+              -- Further information about build-on save:
+              -- https://zigtools.org/zls/guides/build-on-save/
+              -- enable_build_on_save = true,
+
+              -- omit the following line if `zig` is in your PATH
+              -- zig_exe_path = '/path/to/zig_executable'
+            },
+          },
         },
 
         -- typescript
@@ -1022,6 +1041,7 @@ require('lazy').setup({
         'query',
         'vim',
         'vimdoc',
+        'zig',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,

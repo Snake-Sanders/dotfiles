@@ -67,8 +67,8 @@
     },
     "vscode-neovim.compositeKeys": {},
     "editor.cursorSurroundingLines": 1,
-"editor.smoothScrolling": true,
-"vscode-neovim.neovimViewportHeightExtend": 5,
+    "editor.smoothScrolling": true,
+    "vscode-neovim.neovimViewportHeightExtend": 5,
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/mac/.config/nvim/init.lua",
     "svg.minify.convertShapeToPath": false
 }

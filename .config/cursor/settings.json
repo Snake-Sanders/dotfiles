@@ -1,0 +1,74 @@
+{
+    "workbench.colorTheme": "Catppuccin Macchiato Bordered",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.accessibilitySupport": "off",
+    "editor.minimap.enabled": false,
+    "[elixir]": {
+        "editor.defaultFormatter": "JakeBecker.elixir-ls"
+    },
+    "elixirLS.signatureAfterComplete": false,
+    "emmet.includeLanguages": {
+        "html-eex": "html",
+        "elixir": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "[html]": {
+        "editor.defaultFormatter": "RoyalMist.vscode-eex-format"
+    },
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "[phoenix-heex]": {
+        "editor.defaultFormatter": "JakeBecker.elixir-ls"
+    },
+    "[html-eex]": {
+        "editor.defaultFormatter": "RoyalMist.vscode-eex-format"
+    },
+    "workbench.sideBar.location": "right",
+    "terminal.explorerKind": "external",
+    "elixirLS.suggestSpecs": false,
+    "git.confirmSync": false,
+    "editor.minimap.maxColumn": 80,
+    "editor.rulers": [
+        80
+    ],
+    "notebook.lineNumbers": "on",
+    "editor.renderFinalNewline": "off",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "git.suggestSmartCommit": false,
+    "workbench.editor.enablePreview": false,
+    "gitlens.views.commitDetails.files.layout": "list",
+    "pomodoro.soundIntervalNotification": 15,
+    "pomodoro.workColorTime": "yellow",
+    "pomodoro.breakColorButton": "red",
+    "pomodoro.breakColorTime": "red",
+    "pomodoro.workTime": 30,
+    "git.openRepositoryInParentFolders": "never",
+    "editor.hover.delay": 2000,
+    "window.zoomLevel": 2,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "editor.stickyScroll.enabled": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[yaml]": {
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "svg.preview.mode": "svg",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vscode-neovim.compositeKeys": {},
+    "editor.cursorSurroundingLines": 1,
+"editor.smoothScrolling": true,
+"vscode-neovim.neovimViewportHeightExtend": 5,
+    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/mac/.config/nvim/init.lua",
+    "svg.minify.convertShapeToPath": false
+}

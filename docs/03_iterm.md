@@ -1,4 +1,7 @@
 # iTerm2
+
+> Replaced iTerm with Ghostty
+
 - [iTerm2](#iterm2)
   - [ZSH](#zsh)
   - [Color scheme](#color-scheme)

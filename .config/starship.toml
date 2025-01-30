@@ -19,6 +19,10 @@ format = '[$name $version]($style)'
 truncation_length = 28
 format =  '[$symbol $branch ]($style)'
 
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
 [elixir]
 symbol = '🔮 '
 format = "[$symbol ]($style)"

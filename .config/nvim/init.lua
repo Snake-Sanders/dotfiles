@@ -940,17 +940,6 @@ require('lazy').setup({
     end,
   },
 
-  --  NOTE: Undotree
-  --
-  --  to show the list of latest unsaved changes in a tree
-  {
-    'mbbill/undotree',
-    lazy = false,
-    keys = {
-      { '<leader>U', '<cmd>UndotreeToggle<cr>', desc = 'Toggle [U]ndoTree' },
-    },
-  },
-
   --  NOTE: Harpoon
   --
   -- swich between recent files blazingly fast

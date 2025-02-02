@@ -962,14 +962,7 @@ require('lazy').setup({
       'nvim-lua/plenary.nvim',
     },
   },
-  --  NOTE: Trouble diagnostics
-{
-  'folke/trouble.nvim',
-},
-  --  NOTE: NeoTree
-  {
-    'nvim-neo-tree/neo-tree.nvim',
-  },
+
   -- [[ end of custom plugins ]]
 }, {
   ui = {

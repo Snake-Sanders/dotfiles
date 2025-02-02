@@ -932,14 +932,6 @@ require('lazy').setup({
     opts = {},
   },
 
-  --  NOTE: Git integration
-  {
-    'tpope/vim-fugitive',
-    config = function()
-      vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
-    end,
-  },
-
   --  NOTE: Harpoon
   --
   -- swich between recent files blazingly fast

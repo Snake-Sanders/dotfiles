@@ -932,18 +932,6 @@ require('lazy').setup({
     opts = {},
   },
 
-  --  NOTE: Harpoon
-  --
-  -- swich between recent files blazingly fast
-  {
-    'ThePrimeagen/harpoon',
-    branch = 'harpoon2',
-    lazy = false,
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-    },
-  },
-
   -- [[ end of custom plugins ]]
 }, {
   ui = {

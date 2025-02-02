@@ -67,4 +67,4 @@ opt.inccommand = 'split'
 opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-opt.scrolloff = 10 
+opt.scrolloff = 10

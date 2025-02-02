@@ -252,11 +252,15 @@ return {
 
     require('mason-lspconfig').setup {
       handlers = {
+        -- Skip rust_analyzer setup, it is handled by rustacianvim.lua
+        ['rust_analyzer'] = function() end,
+
         function(server_name)
           -- here is my patch for nvim v10 that tsserver changed the name.
           if server_name == 'tsserver' then
             server_name = 'ts_ls'
           end
+
           local server = servers[server_name] or {}
           -- This handles overriding only values explicitly passed
           -- by the server configuration above. Useful when disabling

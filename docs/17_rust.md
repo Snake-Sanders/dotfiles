@@ -21,9 +21,12 @@ Install `rust-analyzer` in neovim using Mason.
 
 ## NvimDap
 
-1. `nvim-dap` this is the Debug Adapter Protocol.
+`nvim-dap` this is the Debug Adapter Protocol.
+https://github.com/mfussenegger/nvim-dap
 
 ## NvimDap-UI
+
+https://github.com/rcarriga/nvim-dap-ui
 
 ## CodeLLDB
 
@@ -33,8 +36,6 @@ CodeLLDB is a debug adapter (there are others e.g. lldb)
 ## RustaceanVim (old Rust-Tools)
 
 Install `rustaceanvim` 
-
-- About 
 
 This is the continuation of `rust-tools` after being deprecated in jan 2024.
 

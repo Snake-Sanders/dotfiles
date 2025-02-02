@@ -1003,18 +1003,6 @@ require('lazy').setup({
       { '<leader>U', '<cmd>UndotreeToggle<cr>', desc = 'Toggle [U]ndoTree' },
     },
   },
-  --  NOTE: Fine Command
-  --
-  --  shows the command input field in the center of the screen
-  {
-    'VonHeikemen/fine-cmdline.nvim',
-    dependencies = {
-      'MunifTanjim/nui.nvim',
-    },
-    keys = {
-      { ':', '<cmd>FineCmdline<CR>', desc = 'floating windowd for cmd' },
-    },
-  },
 
   --  NOTE: Harpoon
   --

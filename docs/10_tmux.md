@@ -74,11 +74,11 @@ terminal:
 
 `Ctrl + B, then D`
 
-to reatach
+to reatach type `<leader> + :` then
 
 `tmux attach-session -t exercism`
 
-kill the session
+kill the session type `<leader> + :` then
 
 `tmux kill-session`
 

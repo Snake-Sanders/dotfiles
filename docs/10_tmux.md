@@ -36,7 +36,11 @@ Check tmux nvim navigator plug
 
 create a new workspace 
 
-`tmuxinator new workspace`
+`tmuxinator new workspace-name`
+
+Example: 
+
+`tmuxinator new exercism`
 
 Edit the generated config (~/.config/tmuxinator/exercism.yml):
 
@@ -44,14 +48,17 @@ Edit the generated config (~/.config/tmuxinator/exercism.yml):
 name: exercism
 root: ~/
 
-# opens two vertical panes in Excercism/rust folder with nushell 
 
+# Set Nushell as the default shell for all windows and panes in this workspace
+pre_window: nu
+
+# opens two vertical panes in Excercism/rust folder
 windows:
   - exercism:
       layout: main-vertical
       panes:
-        - cd ~/Exercism/rust && nu
-        - cd ~/Exercism/rust && nu
+        - cd ~/Exercism/rust
+        - cd ~/Exercism/rust
 
       # synchronize: after
 ```
@@ -59,6 +66,21 @@ windows:
 then launch with :
 
 `tmuxinator start workspace`
+
+to exit
+
+If you want to leave tmux running in the background but go back to your normal
+terminal:
+
+`Ctrl + B, then D`
+
+to reatach
+
+`tmux attach-session -t exercism`
+
+kill the session
+
+`tmux kill-session`
 
 ## Tmux resurrect
 

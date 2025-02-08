@@ -30,7 +30,17 @@ and paste the settings for `Config 3` example
 
 Check tmux nvim navigator plug
 
-## Workspaces with Tmuxinator 
+## Workspaces 
+### custom shell launcher
+
+create a bash script to setup the workspace
+
+```sh
+mv ~/.config/tmux/exercism.sh ~/.local/bin/exercism
+chmod +x ~/.local/bin/exercism
+```
+
+### Tmuxinator (Slow)
 
 `brew install tmuxinator`
 

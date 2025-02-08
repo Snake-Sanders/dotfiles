@@ -31,7 +31,8 @@ and paste the settings for `Config 3` example
 Check tmux nvim navigator plug
 
 ## Workspaces 
-### custom shell launcher
+
+### shell script launcher (fast)
 
 create a bash script to setup the workspace
 

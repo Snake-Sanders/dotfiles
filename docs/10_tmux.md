@@ -30,6 +30,36 @@ and paste the settings for `Config 3` example
 
 Check tmux nvim navigator plug
 
+## Workspaces with Tmuxinator 
+
+`brew install tmuxinator`
+
+create a new workspace 
+
+`tmuxinator new workspace`
+
+Edit the generated config (~/.config/tmuxinator/exercism.yml):
+
+```yaml
+name: exercism
+root: ~/
+
+# opens two vertical panes in Excercism/rust folder with nushell 
+
+windows:
+  - exercism:
+      layout: main-vertical
+      panes:
+        - cd ~/Exercism/rust && nu
+        - cd ~/Exercism/rust && nu
+
+      # synchronize: after
+```
+
+then launch with :
+
+`tmuxinator start workspace`
+
 ## Tmux resurrect
 
 saves you sessions and can be restored after system restart

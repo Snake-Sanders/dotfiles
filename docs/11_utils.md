@@ -28,3 +28,28 @@ Example
 /usr/local/Caskroom/chromedriver 
 $ xattr -d com.apple.quarantine chromedriver
 
+**Updated for latest MacOs version** 
+
+To install run:
+
+`brew install --cask chromedriver`
+
+To update run: 
+
+`brew upgrade chromedriver`
+
+run the tests, it will fail because Apple cannot verify the source,
+the popup message will offer the option to open the file location.
+Open it and then open a terminal in that location, then execute this
+commad to remove chromedriver from the quarentine:
+
+`xattr -d com.apple.quarantine chromedriver`
+
+For MacOs _Sonoma_ the command is different
+
+`Example:
+
+```
+cd /opt/homebrew/Caskroom/chromedriver/129.0.6668.58/chromedriver-mac-arm64
+xattr -c chromedriver
+```

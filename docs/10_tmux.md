@@ -30,6 +30,69 @@ and paste the settings for `Config 3` example
 
 Check tmux nvim navigator plug
 
+## Workspaces 
+
+### shell script launcher (fast)
+
+create a bash script to setup the workspace
+
+```sh
+mv ~/.config/tmux/exercism.sh ~/.local/bin/exercism
+chmod +x ~/.local/bin/exercism
+```
+
+### Tmuxinator (Slow)
+
+`brew install tmuxinator`
+
+create a new workspace 
+
+`tmuxinator new workspace-name`
+
+Example: 
+
+`tmuxinator new exercism`
+
+Edit the generated config (~/.config/tmuxinator/exercism.yml):
+
+```yaml
+name: exercism
+root: ~/
+
+
+# Set Nushell as the default shell for all windows and panes in this workspace
+pre_window: nu
+
+# opens two vertical panes in Excercism/rust folder
+windows:
+  - exercism:
+      layout: main-vertical
+      panes:
+        - cd ~/Exercism/rust
+        - cd ~/Exercism/rust
+
+      # synchronize: after
+```
+
+then launch with :
+
+`tmuxinator start workspace`
+
+to exit
+
+If you want to leave tmux running in the background but go back to your normal
+terminal:
+
+`Ctrl + B, then D`
+
+to reatach type `<leader> + :` then
+
+`tmux attach-session -t exercism`
+
+kill the session type `<leader> + :` then
+
+`tmux kill-session`
+
 ## Tmux resurrect
 
 saves you sessions and can be restored after system restart

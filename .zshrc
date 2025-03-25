@@ -51,6 +51,7 @@ alias la="la -la"
 alias lla="ls -la"
 alias cbe="cd /Users/mac/src/work/cm-backend"
 alias cpr="cd /Users/mac/src/work/cm-processor"
+alias exer="~/.config/tmux/exe_rust.sh"
 alias tree="tree -L 2"
 
 eval "$(starship init zsh)"

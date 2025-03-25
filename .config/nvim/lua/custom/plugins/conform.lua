@@ -29,6 +29,7 @@ return { -- Autoformat
       return {
         timeout_ms = 500,
         lsp_format = lsp_format_opt,
+        quiet = true, -- This will prevent format errors from stopping the save
       }
     end,
     formatters_by_ft = {

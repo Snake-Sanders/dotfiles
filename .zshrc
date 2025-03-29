@@ -17,7 +17,7 @@ ZSH_THEME="robbyrussell"
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # ZSH Framework plugin like asdf for oh-my-zsh source this script and setup completions.
-plugins=(zsh-autosuggestions zsh-syntax-highlighting web-search asdf)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting web-search)
 
 source $ZSH/oh-my-zsh.sh
 

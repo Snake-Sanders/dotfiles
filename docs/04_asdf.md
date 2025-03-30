@@ -33,3 +33,22 @@ asdf reshim
 * Source ref: 
 https://braytonium.com/2023/01/09/asdf-seems-broken-after-homebrew-upgrade/ 
 
+**The problem**
+
+When opening the terminal this error is shown:
+
+```sh
+/Users/mac/.zshrc:.:25: no such file or directory: /opt/homebrew/opt/asdf/libexec/asdf.sh
+```
+
+**The Solution**
+
+Exports the PATH to include asdf's shims directory
+
+Uses the `ASDF_DATA_DIR` environment variable if set, otherwise defaults to `$HOME/.asdf`.
+
+Follows the new recommended way to configure asdf in version `0.16.x`
+
+```sh
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+```

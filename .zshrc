@@ -21,8 +21,8 @@ plugins=(zsh-autosuggestions zsh-syntax-highlighting web-search)
 
 source $ZSH/oh-my-zsh.sh
 
-# asdf was installed with homebrew, do we need to plug asdf for zsh 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# Initialize asdf version manager (required for managing programming language versions)
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # User configuration
 
@@ -66,5 +66,3 @@ eval "$(starship init zsh)"
 # source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-

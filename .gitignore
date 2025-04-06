@@ -1,4 +1,5 @@
 .DS_Store
 tmux/plugins/
 .config/tmux/plugins/
+.config/karabiner/automatic_backups
 fzf

@@ -4,3 +4,6 @@
 
 -- disabled animations
 vim.g.snacks_animate = false
+
+-- vertical rule
+vim.opt.colorcolumn = "80"

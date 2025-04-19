@@ -33,6 +33,11 @@ vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "copy to clipboard" })
 -- avoid replay last recorded macro
 vim.keymap.set("n", "Q", "<nop>")
 
+-- Deletes useless Lazyvim keymaps
+vim.keymap.del("n", "gco")
+vim.keymap.del("n", "gcc")
+vim.keymap.del("n", "gc0")
+
 -- [[ Debugger Keybindings ]]
 
 -- Nvim DAP

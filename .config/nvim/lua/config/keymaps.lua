@@ -36,7 +36,8 @@ vim.keymap.set("n", "Q", "<nop>")
 -- Deletes useless Lazyvim keymaps
 vim.keymap.del("n", "gco")
 vim.keymap.del("n", "gcc")
-vim.keymap.del("n", "gc0")
+-- deleting gc0 causes error with keymapping
+-- vim.keymap.del("n", "gc0")
 
 -- [[ Debugger Keybindings ]]
 

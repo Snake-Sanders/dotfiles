@@ -22,3 +22,7 @@ not use the dot, call it just with: `nvim`.
 If you suspect a conflict with the key `gc` in normal mode (n), you can run:
 
 `:verbose nmap gc`
+
+Then you can remove the conflict keymap, in this case `gco` with:
+
+`vim.keymap.del("n", "gco")`

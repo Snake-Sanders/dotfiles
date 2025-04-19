@@ -19,6 +19,10 @@ not use the dot, call it just with: `nvim`.
 
 * Clashing keymap
 
+Check your keymap status with
+
+`checkhealth which-key`
+
 If you suspect a conflict with the key `gc` in normal mode (n), you can run:
 
 `:verbose nmap gc`

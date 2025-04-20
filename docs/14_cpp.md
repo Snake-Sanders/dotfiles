@@ -49,7 +49,7 @@ clangd = {
 
 ## install CMake
 
-`brew install --cask cmake`
+`brew install cmake`
 
 check with:
 

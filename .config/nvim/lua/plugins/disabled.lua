@@ -6,5 +6,5 @@ return {
   -- autocomplete is distracting
   { "hrsh7th/nvim-cmp", enabled = false },
   -- blink autocompletion
-  { "saghen/blink.cmp", enabled = false },
+  -- { "saghen/blink.cmp", enabled = false },
 }

@@ -105,3 +105,25 @@ file in your root dir:
 CompileFlags:
     Add: [-std=c++17]
 ```
+
+## Boost
+
+`brew install boost`
+
+to check the installation path run:
+
+```bash
+> brew --prefix boost
+/opt/homebrew/opt/boost
+```
+
+then in the code import the libraries as follow:
+
+- Example
+
+```cpp
+#include "boost/date_time/posix_time/posix_time.hpp"
+
+using boost::posix_time::ptime;
+using boost::posix_time::time_from_string;
+```

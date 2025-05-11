@@ -122,8 +122,17 @@ then in the code import the libraries as follow:
 - Example
 
 ```cpp
-#include "boost/date_time/posix_time/posix_time.hpp"
+#include "boost/date_time/posix_time/posix_time_types.hpp"
 
 using boost::posix_time::ptime;
+using boost::posix_time::seconds;
 using boost::posix_time::time_from_string;
+
+using boost::posix_time::time_from_string;
+
+ptime advance(ptime s) {
+  // adds 1 Gs to the time s
+  return s + seconds(1000000000);
+}
+
 ```

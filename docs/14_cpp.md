@@ -1,6 +1,6 @@
 ## Installling CPP tools
 
-## Clang 
+## Clang
 
 Most probably Clang is already installed, but double check anyway:
 
@@ -13,29 +13,30 @@ Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 ```
 
-otherwise install it with 
+otherwise install it with
 
 `brew install llvm`
 
-## Neovim 
+## Neovim
 
 follow the installation in `https://clangd.llvm.org/installation`
 
 add `clangd` to the `lspconfig`
 
-** Attention**: 
+**Attention**:
 Use only the installation of `clangd` from the system not the neovim pluging.
 If we don't indicate where `clangd` is installed in the system, neovim
-with automatically pull the `clangd` module from the repo. 
-This will create a conflict with the local installation failing to locate the 
-standar library. (e.g.: it will complain about the includes and `cout`, `cin`, 
+with automatically pull the `clangd` module from the repo.
+This will create a conflict with the local installation failing to locate the
+standar library. (e.g.: it will complain about the includes and `cout`, `cin`,
 `endl`, etc.
 
 so instead of using the default configuration `cmd = { 'clangd', ...`
-we specify the version from the system `cmd = { '/usr/bin/clangd',...` 
+we specify the version from the system `cmd = { '/usr/bin/clangd',...`
 to see where is the system installation, just type `which clangd`
 
 :!clangd --version
+
 ```lua
 -- cpp
 clangd = {
@@ -67,7 +68,6 @@ project/
 └── main.cpp
 ```
 
-
 add `CMakeLists.txt` to the root of the dir project
 
 ```cmake
@@ -98,7 +98,7 @@ Then you can run it by calling `./app`
 
 ## Version
 
-For Exercism it is needed Cpp+17, you can add `.clangd` 
+For Exercism it is needed Cpp+17, you can add `.clangd`
 file in your root dir:
 
 ```cpp

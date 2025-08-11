@@ -11,7 +11,8 @@ package.
 
 ## Layout
 
-In order to preserver Nuphy layout: '`' next to 1. set in karabiner the Keyboard type`ANSI North America`
+In order to preserver Nuphy layout:
+havign the tilde: \` next to 1. set in karabiner the Keyboard type`ANSI North America`
 
 ## source
 

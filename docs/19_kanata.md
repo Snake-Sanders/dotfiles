@@ -10,6 +10,9 @@
 2. `brew install kanata`
 3. launch kanata:
 `sudo kanata --cfg dotfiles/.config/kanata/home_row_mod.kbd`
+4. set the keyboard to karabiner virtual
+
+![setting virtual keyboard](./imgs/karaviner_virtual_keyboard.png)
 
 ## Home row mode
 

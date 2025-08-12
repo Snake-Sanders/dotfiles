@@ -10,3 +10,7 @@
 2. `brew install kanata`
 3. launch kanata:
 `sudo kanata --cfg dotfiles/.config/kanata/home_row_mod.kbd`
+
+## Home row mode
+
+- Navigating with `hjkl` in neovim requires to double tap for having repetitions

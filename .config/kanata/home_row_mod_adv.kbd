@@ -32,12 +32,12 @@
   )
 )
 (deflayer base
-  esc  🔅  🔆  f3  f4  f5  f6  ◀◀  ▶⏸  ▶▶  🔇  🔉  🔊
+  esc  🔅  🔆  @mc  @sls  @dtn  f6  ◀◀  ▶⏸  ▶▶  🔇  🔉  🔊
   @a  @s  @d  @f  @j  @k  @l  @;
 )
 
 (deflayer nomods
-  esc  🔅  🔆  f3  f4  f5  f6  ◀◀  ▶⏸  ▶▶  🔇  🔉  🔊
+  esc  🔅  🔆  @mc  @sls  @dtn  f6  ◀◀  ▶⏸  ▶▶  🔇  🔉  🔊
   a   s   d   f   j   k   l   ;
 )
 (deffakekeys
@@ -57,4 +57,11 @@
   k (tap-hold-release-keys $tap-time $hold-time (multi k @tap) rctl $right-hand-keys)
   l (tap-hold-release-keys $tap-time $hold-time (multi l @tap) ralt $right-hand-keys)
   ; (tap-hold-release-keys $tap-time $hold-time (multi ; @tap) rmet $right-hand-keys)
-)
+ 
+   ;; Mission Control (macOS): sends Control + Up Arrow
+   mc C-up
+   ;; Spotlight Search (macOS): sends Command + Space
+   sls M-spc
+   ;; Dictation (macOS): sends Shift + Control + Option + Command + F5
+   dtn S-C-A-M-f5
+ )

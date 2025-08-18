@@ -9,10 +9,19 @@
 (defcfg
   process-unmapped-keys yes
 )
+
+;; Reference 
+;; https://github.com/benvallack/dotfiles/blob/main/kanata_12_macbook.kbd
+
 (defsrc
-  esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
-  a   s   d   f   j   k   l   ;
-)
+  esc           f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
+  IntlBackslash  1  2  3  4  5  6  7  8  9  0    -   =  bspc
+  tab            q  w  e  r  t  y  u  i  o  p    [   ]  ret 
+  caps           a  s  d  f  g  h  j  k  l  ;    '   \ 
+  lsft         ` z  x  c  v  b  n  m  ,  .  /  rsft
+  lctl           lalt lmet          spc        rmet ralt
+  )
+
 (defvar
   ;; Note: consider using different time values for your different fingers.
   ;; For example, your pinkies might be slower to release keys and index
@@ -25,6 +34,7 @@
     a s d f g
     z x c v b
   )
+
   right-hand-keys (
     y u i o p
     h j k l ;
@@ -33,13 +43,22 @@
 )
 (deflayer base
   esc  🔅  🔆  @mc  @sls  @dtn  f6  ◀◀  ▶⏸  ▶▶  🔇  🔉  🔊
-  @a  @s  @d  @f  @j  @k  @l  @;
+  IntlBackslash  1  2  3  4  5  6  7  8  9  0    -   =  bspc
+  tab            q  w  e  r  t  y  u  i  o  p    [   ]  ret 
+  caps           @a @s @d @f  g  h  @j @k @l  @;   '   \
+  lsft         ` z  x  c  v  b  n  m  ,  .  /  rsft
+  lctl           lalt lmet          spc        rmet ralt
 )
 
 (deflayer nomods
   esc  🔅  🔆  @mc  @sls  @dtn  f6  ◀◀  ▶⏸  ▶▶  🔇  🔉  🔊
-  a   s   d   f   j   k   l   ;
+  IntlBackslash  1  2  3  4  5  6  7  8  9  0    -   =  bspc
+  tab            q  w  e  r  t  y  u  i  o  p    [   ]  ret 
+  caps           a   s   d   f   j   k   l   ;  '   \
+  lsft         ` z  x  c  v  b  n  m  ,  .  /  rsft
+  lctl           lalt lmet          spc        rmet ralt
 )
+
 (deffakekeys
   to-base (layer-switch base)
 )

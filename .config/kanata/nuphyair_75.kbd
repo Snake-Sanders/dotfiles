@@ -1,0 +1,84 @@
+;; NuPhy Air 75 Kanata Configuration
+;; Home row mods QWERTY setup for NuPhy Air 75 keyboard
+;; - when a home row mod activates tap, the home row mods are disabled
+;;   while continuing to type rapidly
+;; - tap-hold-release helps make the hold action more responsive
+;; - pressing another key on the same half of the keyboard
+;;   as the home row mod will activate an early tap action
+
+(defcfg
+  process-unmapped-keys yes
+)
+
+;; NuPhy Air 75 layout - 75% keyboard with F-row and arrow keys
+(defsrc
+  esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  f13 f14 del
+  grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc    pgup
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    \       pgdn
+  caps  a    s    d    f    g    h    j    k    l    ;    '    ret         home
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft up         end
+  lctl  lalt lmet           spc            rmet ralt rctl left down rght
+  )
+
+(defvar
+  ;; Note: consider using different time values for your different fingers.
+  ;; For example, your pinkies might be slower to release keys and index
+  ;; fingers faster.
+  tap-time 200
+  hold-time 150
+
+  left-hand-keys (
+    q w e r t
+    a s d f g
+    z x c v b
+  )
+
+  right-hand-keys (
+    y u i o p
+    h j k l ;
+    n m , . /
+  )
+)
+(deflayer base
+  esc   🔅   🔆   @mc  @sls @dtn  f6   ◀◀   ▶⏸   ▶▶   🔇   🔉   🔊    f13 f14 del
+  grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc    pgup
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    \       pgdn
+  lctl  @a   @s   @d   @f   g    h    @j   @k   @l   @;   '    ret         home
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft up         end
+  lctl  lalt lmet           spc            rmet ralt rctl left down rght
+)
+
+(deflayer nomods
+  esc   🔅   🔆   @mc  @sls @dtn  f6   ◀◀   ▶⏸   ▶▶   🔇   🔉   🔊    f13 f14 del
+  grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc    pgup
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    \       pgdn
+  lctl  a    s    d    f    g    h    j    k    l    ;    '    ret         home
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft up         end
+  lctl  lalt lmet           spc            rmet ralt rctl left down rght
+)
+
+(deffakekeys
+  to-base (layer-switch base)
+)
+(defalias
+  tap (multi
+    (layer-switch nomods)
+    (on-idle-fakekey to-base tap 20)
+  )
+
+  a (tap-hold-release-keys $tap-time $hold-time (multi a @tap) lmet $left-hand-keys)
+  s (tap-hold-release-keys $tap-time $hold-time (multi s @tap) lalt $left-hand-keys)
+  d (tap-hold-release-keys $tap-time $hold-time (multi d @tap) lctl $left-hand-keys)
+  f (tap-hold-release-keys $tap-time $hold-time (multi f @tap) lsft $left-hand-keys)
+  j (tap-hold-release-keys $tap-time $hold-time (multi j @tap) rsft $right-hand-keys)
+  k (tap-hold-release-keys $tap-time $hold-time (multi k @tap) rctl $right-hand-keys)
+  l (tap-hold-release-keys $tap-time $hold-time (multi l @tap) ralt $right-hand-keys)
+  ; (tap-hold-release-keys $tap-time $hold-time (multi ; @tap) rmet $right-hand-keys)
+ 
+   ;; Mission Control (macOS): sends Control + Up Arrow
+   mc C-up
+   ;; Spotlight Search (macOS): sends Command + Space
+   sls M-spc
+   ;; Dictation (macOS): sends Shift + Control + Option + Command + F5
+   dtn S-C-A-M-f5
+ )

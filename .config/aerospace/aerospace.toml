@@ -1,0 +1,103 @@
+# Aerospace configuration with Hyprland-style shortcuts
+# Place this file at ~/.aerospace.toml
+
+# After launching AeroSpace, use 'aerospace reload-config' to apply changes
+
+# Use Alt as the main modifier (equivalent to Super/Cmd in Hyprland)
+# You can change this to 'cmd' if you prefer Command key
+[mode.main.binding]
+
+# Window Focus (Hyprland: Super + H/J/K/L)
+alt-h = 'focus left'
+alt-j = 'focus down' 
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+# Move Windows (Hyprland: Super + Shift + H/J/K/L)
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+# Resize Windows (Hyprland: Super + Ctrl + H/J/K/L)
+alt-ctrl-h = 'resize smart -50'
+alt-ctrl-l = 'resize smart +50'
+alt-ctrl-k = 'resize smart -50'
+alt-ctrl-j = 'resize smart +50'
+
+# Layout Controls
+alt-v = 'layout v_accordion'  # Vertical split equivalent
+alt-shift-v = 'layout h_accordion'  # Horizontal split
+alt-t = 'layout floating tiling'  # Toggle floating (closest equivalent)
+alt-f = 'fullscreen'  # Toggle fullscreen
+
+# Workspace Navigation (Hyprland: Super + 1-9)
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
+
+# Move Windows to Workspace (Hyprland: Super + Shift + 1-9)
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
+
+# Additional useful shortcuts
+alt-enter = 'exec-and-forget open -n /Applications/Terminal.app'  # Open terminal
+alt-q = 'close'  # Close window
+alt-shift-r = 'reload-config'  # Reload config
+
+# Split controls (more granular than layout switching)
+alt-s = 'split horizontal'  # Split horizontally
+alt-shift-s = 'split vertical'    # Split vertically
+
+# Workspace switching with arrow keys (alternative)
+alt-left = 'workspace prev'
+alt-right = 'workspace next'
+
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'main'
+3 = 'main'
+4 = 'main'
+5 = 'main'
+
+# Automatically start AeroSpace on login
+[on-startup]
+start-at-login = true
+
+# Default layout
+default-root-container-layout = 'tiles'
+
+# Window gaps (similar to Hyprland gaps)
+[gaps]
+inner.horizontal = 8
+inner.vertical = 8
+outer.left = 8
+outer.bottom = 8
+outer.top = 8
+outer.right = 8
+
+# Automatically assign apps to workspaces
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Terminal'
+run = 'move-node-to-workspace 3'

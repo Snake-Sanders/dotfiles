@@ -2,6 +2,9 @@
 
 Karabiner allows using home row mod on Macos amoung other keymapings.
 
+**Update**: After some testing it is better to use `Kanata`, however Kanata requires
+Karabiner drivers in order to function on MacOS.
+
 ## Installation
 
 On Macos Sequoia the hombrew installation does not work, install it from the

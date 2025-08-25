@@ -55,7 +55,7 @@ alias exer="~/.config/tmux/exe_rust.sh"
 alias tree="tree -L 2"
 # kanata.sh lauches the command to set the home row mode: 
 # sudo kanata --cfg ~/dotfiles/.config/kanata/macbookpro14.kbd
-alias kb="sh kanata.sh"
+alias kb="sh .kanata.sh"
 
 eval "$(starship init zsh)"
 

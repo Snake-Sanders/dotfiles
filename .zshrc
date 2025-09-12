@@ -62,6 +62,9 @@ eval "$(starship init zsh)"
 # rust
 . "$HOME/.cargo/env"
 
+# enables vi motions in terminal
+set -o vi
+
 # Syntax higlight has to be the last configuration!
 # If you receive "highlighters directory not found" error message,
 # you may need to add the following to your.zshenv:

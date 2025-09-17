@@ -1,5 +1,5 @@
 #theme = dark:catppuccin-macchiato,light:catppuccin-latte
-theme = catppuccin-macchiato
+theme = Catppuccin Macchiato
 font-size = 14
 font-feature = -calt
 mouse-hide-while-typing = true

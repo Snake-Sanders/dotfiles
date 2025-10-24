@@ -1,18 +1,18 @@
 # Ubuntu installation of custom tools and configuration
 
-## Install essentials
+## Install essentials 
 
 sudo apt install stow vim git
 
 ## dotfiles
 
-With stow now you can checkout this dotfiles repo
+With stow now you can checkout this `dotfiles` repo
 
 ## Nerdfonts
 
 How to test if the fonts are installed.
 
-Open your shell's configuration file (e.g., .zshrc) and add export NERD_FONT_CHECK_AUTO=1.
+Open your shell's configuration file (e.g., .zshrc) and add export NERD_FONT_CHECK_AUTO=1. 
 Restart the terminal and run a command. If icons appear correctly, the font is installe
 export NERD_FONT_CHECK_AUTO=1
 
@@ -38,32 +38,34 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 ## FZF
 
-The version in ubuntu is quite old, so the keybindings CTRL + R does not work.
+The version in ubuntu is quite old, so the keybindings CTRL + R does not work. 
 Better to clone fzf and install it directly from the sources.
 
 say yes to everything, we want the keybindings.
 
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
 
-Silver search is used by FZF for string manipulation. See .zshrc and the
-export variable `FZF_DEFAULT_COMMAND`.
+Silver search is used by FZF for string manipulation. See .zshrc and the 
+export variable `FZF_DEFAULT_COMMAND`. 
 
-sudo apt install silversearcher-ag
+    sudo apt install silversearcher-ag 
 
 ## Lua and luarocks
 
-sudo apt install lua5.1
-sudo apt install luarocks
+    sudo apt install lua5.1
+    sudo apt install luarocks
 
 ## Lazygit
 
 For Ubuntu 24 use this command, for 25 on you can use apt install.
 
+```sh
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
+```
 
 ## Neovim
 
@@ -73,53 +75,92 @@ snap install neovim
 
 ## Ghostty
 
-snap install ghostty --classic
+    snap install ghostty --classic
+
+Set as default terminal
+
+    gsettings set org.gnome.desktop.default-applications.terminal exec '/snap/ghostty/current/bin/ghostty'
 
 ## Starship
 
-curl -sS https://starship.rs/install.sh | sh
+    curl -sS https://starship.rs/install.sh | sh
+
+## Nerdfonts
+
+I am using FiraMono
+
+1. Download a Nerd Font
+
+https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraMono.zip
+
+2. Unzip and copy to ~/.fonts
+
+    mkdir ~/.fonts
+    cp  ~/Downloads/FiraMono/* ~/.fonts/
+
+3. Run the command fc-cache -fv to manually rebuild the font cache
+
 
 ## Lazyvim
 
 Install lazyvim dependencies:
 
-sudo apt install fd-find nodejs tree silversearcher-ag lazygit
+    sudo apt install fd-find nodejs tree silversearcher-ag lazygit
 
-If it is not possible to yank to the clipboard in order to paste it outside
-neovim, the add this line to `.config/nvim/lua/config/options.lua`
+**Copy & Paste**
 
-vim.opt.clipboard = ""
+For __wayland__ install this tool to allow copy out of neovim
 
-requies to install this tool
-sudo apt install xsel
+    sudo apt install wl-clipboard
+
+For __Xorg__: Install xsel or xclip
+
+**Ripgrep**
+
+Snaks requires ripgrep
+
+    sudo apt-get install ripgrep
+
+Now to make sure all requirements were installed
+
+Open nvim and type `:checkhealth`
 
 ## VPN
 
 1. install the OpenVPN plugin:
-Open the terminal and run:
+Open the terminal and run 
 
-sudo apt-get install network-manager-openvpn-gnome
-to install the OpenVPN integration for NetworkManager.
+    sudo apt-get install network-manager-openvpn-gnome 
+
+to install the OpenVPN integration for NetworkManager. 
+
 2. Get configuration files:
-Download the .ovpn configuration file from your work's VPN portal or from your IT department.
-3. Import the connection:
-Go to Settings > Network > VPN and click the + button. Select "Import from file..." and choose the .ovpn file you downloaded.
-4. Enter credentials:
-When prompted, enter your work account username and password.
-Connect:
-You should now see the VPN listed in your network settings. Click the toggle to connect.
+Download the .ovpn configuration file from your work's VPN portal or from your IT department. 
 
-sudo apt-get install network-manager-openvpn-gnome
+3. Import the connection:
+Go to Settings > Network > VPN and click the + button. Select "Import from file..." and choose the .ovpn file you downloaded. 
+
+4. Enter credentials:
+When prompted, enter your work account username and password. 
+Connect:
+You should now see the VPN listed in your network settings. Click the toggle to connect. 
+
+    sudo apt-get install network-manager-openvpn-gnome
 
 ## Ubuntu custom key shortcuts
 
 Most of Ubuntu default shortcut conflict with neovim shortcuts. And since these
 shortcuts are different from MacOS then it is better to disable them.
 
+you can change this using the GUI, Settings -> Keyboards -> Keyboard Shortcuts 
+
 - backup key shortcuts
-dconf dump /org/gnome/desktop/peripherals/ > ./src/periferals.bkp
-dconf dump /org/gnome/desktop/wm/keybindings/ > ./src/keybindings.bkp
+
+    dconf dump /org/gnome/desktop/peripherals/ > ./src/periferals.bkp
+    dconf dump /org/gnome/desktop/wm/keybindings/ > ./src/keybindings.bkp
 
 - resotre key settings
-dconf load /org/gnome/desktop/peripherals/ < ./src/periferals.bkp
-dconf load /org/gnome/desktop/wm/keybindings/ < ./src/keybindings.bkp
+
+    dconf load /org/gnome/desktop/peripherals/ < ./src/periferals.bkp
+    dconf load /org/gnome/desktop/wm/keybindings/ < ./src/keybindings.bkp
+

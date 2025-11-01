@@ -117,11 +117,11 @@ restart the shell
 
 **Copy & Paste**
 
-For __wayland__ install this tool to allow copy out of neovim
+For **wayland** install this tool to allow copy out of neovim
 
     sudo apt install wl-clipboard
 
-For __Xorg__: Install xsel or xclip
+For **Xorg**: Install xsel or xclip
 
 **Ripgrep**
 
@@ -136,6 +136,16 @@ Open nvim and type `:checkhealth`
 If there is an error about `tree-sitter executable not found`, try to run:
 
     cargo install tree-sitter-cli
+
+## Bat
+
+    sudo apt intall bat
+
+The executable is called `batcat` but using an alias in zshrc solves the problem.
+
+## Code-name Goose
+
+See ttps://block.github.io/goose/docs/quickstart/
 
 ## VPN
 

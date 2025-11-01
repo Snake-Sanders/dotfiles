@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Get current date and time in format YYYY-MM-DD_HH-MM-SS
+timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
+
+# Define destination directory
+dest_dir=~/src/logs/"$timestamp"
+
+# Create the directory
+mkdir -p "$dest_dir"
+
+# Copy the log files
+cp /var/log/syslog "$dest_dir"/syslog 2>/dev/null
+cp /var/log/kern.log "$dest_dir"/kern.log 2>/dev/null
+
+echo "Logs copied to $dest_dir"

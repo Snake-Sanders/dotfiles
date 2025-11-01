@@ -29,6 +29,7 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 
+# adds vim motions to terminal
 export EDITOR=nvim
 
 # Set up fzf key bindings and fuzzy completion
@@ -37,6 +38,9 @@ export EDITOR=nvim
 
 # use silver searcher (ag) plug for find files
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore ~/.config/ag/.ignore -l -g ""'
+
+# arm toolchaing
+export PATH="$PATH:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -50,17 +54,18 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore ~/.config/ag/.ignore -l -g ""'
 alias ll="ls -l"
 alias la="la -la"
 alias lla="ls -la"
-alias cbe="cd /Users/mac/src/work/cm-backend"
-alias cpr="cd /Users/mac/src/work/cm-processor"
-alias exer="~/.config/tmux/exe_rust.sh"
+alias work="cd /src/lambda"
 alias tree="tree -L 2"
+alias panic="~/ubuntu/panic"
+alias bat="batcat"
+
 # kanata.sh lauches the command to set the home row mode: 
 # sudo kanata --cfg ~/dotfiles/.config/kanata/macbookpro14.kbd
 alias kb="sh .kanata.sh"
 
 eval "$(starship init zsh)"
 
-# rust
+# rustexport PATH="$HOME/.local/bin:$PATH"
 . "$HOME/.cargo/env"
 
 # enables vi motions in terminal
@@ -75,3 +80,13 @@ set -o vi
 # source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Ubuntu:
 # echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+
+. "$HOME/.local/share/../bin/env"
+
+# code-name goose, opensource ai
+export GOOSE_BIN_DIR="$HOME/.local/bin/goose"
+export PATH="$GOOSE_BIN_DIR:$PATH"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

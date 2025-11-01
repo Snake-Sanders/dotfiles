@@ -107,6 +107,14 @@ Install lazyvim dependencies:
 
     sudo apt install fd-find nodejs tree silversearcher-ag lazygit
 
+This will not install the latest node, got to their page
+
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+restart the shell
+
+    nvm install 24
+
 **Copy & Paste**
 
 For __wayland__ install this tool to allow copy out of neovim
@@ -124,6 +132,10 @@ Snaks requires ripgrep
 Now to make sure all requirements were installed
 
 Open nvim and type `:checkhealth`
+
+If there is an error about `tree-sitter executable not found`, try to run:
+
+    cargo install tree-sitter-cli
 
 ## VPN
 
@@ -163,4 +175,23 @@ you can change this using the GUI, Settings -> Keyboards -> Keyboard Shortcuts
 
     dconf load /org/gnome/desktop/peripherals/ < ./src/periferals.bkp
     dconf load /org/gnome/desktop/wm/keybindings/ < ./src/keybindings.bkp
+
+## Brave Browser
+
+With brave you can use CTRL + number to select a tab. This does not work in
+Firefox.
+
+    curl -fsS https://dl.brave.com/install.sh | sh
+
+## Tmux
+
+Install:
+
+    sudo apt install tmux
+
+Checkout the package manager called TPM:
+
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+Then to install all the dependencies and plugs, open tmux and press <leader> + I
 

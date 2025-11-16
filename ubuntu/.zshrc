@@ -29,8 +29,9 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 
-# adds vim motions to terminal
-export EDITOR=nvim
+# use nvim as default editor
+export VISUAL="nvim"
+export EDITOR="nvim"
 
 # Set up fzf key bindings and fuzzy completion
 # source <(fzf --zsh)
@@ -86,6 +87,8 @@ set -o vi
 # code-name goose, opensource ai
 export GOOSE_BIN_DIR="$HOME/.local/bin/goose"
 export PATH="$GOOSE_BIN_DIR:$PATH"
+# AI agents keys
+export OPENAI_API_KEY=""
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -1,11 +1,22 @@
 # Install rust tools
 
+<!--toc:start-->
+- [Install rust tools](#install-rust-tools)
+  - [Debugger for Neovim](#debugger-for-neovim)
+  - [Rustup](#rustup)
+  - [Rust analyzer](#rust-analyzer)
+  - [NvimDap](#nvimdap)
+  - [NvimDap-UI](#nvimdap-ui)
+  - [CodeLLDB](#codelldb)
+  - [RustaceanVim (old Rust-Tools)](#rustaceanvim-old-rust-tools)
+<!--toc:end-->
+
 ## Debugger for Neovim
 
 References:
 
-https://romangeber.com/blog/tech/nvim_rust_debugger
-https://www.youtube.com/watch?v=gihHLsClHF0
+<https://romangeber.com/blog/tech/nvim_rust_debugger>
+<https://www.youtube.com/watch?v=gihHLsClHF0>
 
 ## Rustup
 
@@ -22,23 +33,20 @@ Install `rust-analyzer` in neovim using Mason.
 ## NvimDap
 
 `nvim-dap` this is the Debug Adapter Protocol.
-https://github.com/mfussenegger/nvim-dap
+<https://github.com/mfussenegger/nvim-dap>
 
 ## NvimDap-UI
 
-https://github.com/rcarriga/nvim-dap-ui
+<https://github.com/rcarriga/nvim-dap-ui>
 
 ## CodeLLDB
 
-CodeLLDB is a debug adapter (there are others e.g. lldb) 
-
+CodeLLDB is a debug adapter (there are others e.g. lldb)
 
 ## RustaceanVim (old Rust-Tools)
 
-Install `rustaceanvim` 
+Install `rustaceanvim`
 
 This is the continuation of `rust-tools` after being deprecated in jan 2024.
 
-https://github.com/mrcjkb/rustaceanvim
-
-
+<https://github.com/mrcjkb/rustaceanvim>

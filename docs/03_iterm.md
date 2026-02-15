@@ -19,14 +19,12 @@
   - [Appendix](#appendix)
     - [Power Level 10k (obsolete)](#power-level-10k-obsolete)
 
-
 The default terminals on MacOS (/bin/zsh) does **not** support true colors, so better to use _iTerm2_ instead
 
-https://iterm2.com/
+<https://iterm2.com/>
 
 Here is how to pimp your terminal for macos
-https://www.youtube.com/watch?v=wNQpDWLs4To
-
+<https://www.youtube.com/watch?v=wNQpDWLs4To>
 
 ## ZSH
 
@@ -37,7 +35,7 @@ make shure you have zsh as default
 
 ## Color scheme
 
-- go to https://iterm2colorschemes.com/
+- go to <https://iterm2colorschemes.com/>
 - search for `Gruvbox Dark`
 - download the style file, save it as `.itermcolors`
 - go to iTerm2, open settings/profiles/colors tab
@@ -45,6 +43,7 @@ make shure you have zsh as default
 - make sure the style is selected.
 
 - Avoid dimming panes
+
 1. got to settings/apparence/dimming
 2. remove `dim inactive split panes`
 
@@ -74,7 +73,7 @@ option 2:
 
 I dropped Power Level 10k for Starship, the previous was convoluting the environment variables and the configuration files.
 
-https://starship.rs/
+<https://starship.rs/>
 
 `brew install starship`
 
@@ -88,7 +87,7 @@ the config file goes in `~/.config/starship.toml`
 
 ### ZSH syntax highlight
 
-https://github.com/zsh-users/zsh-syntax-highlighting
+<https://github.com/zsh-users/zsh-syntax-highlighting>
 
 check the specific installation section for `Oh-my-zsh`
 
@@ -108,7 +107,7 @@ Restart zsh (such as by opening a new instance of your terminal emulator).
 
 ### ZSH Auto suggestions
 
-https://github.com/zsh-users/zsh-autosuggestions
+<https://github.com/zsh-users/zsh-autosuggestions>
 
 Clone this repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
 
@@ -147,7 +146,7 @@ Just add the plug `web-search` to the pluggins list in `~.zshrc`
 
 If after these steps you open termianl (/bin/zsh) and the prompt has strange characters, then go to Terminal settings change the font to `JetBrainMonoNL NFM Regular 14`
 
-This is one of the adapted fonts from here https://www.nerdfonts.com/font-downloads
+This is one of the adapted fonts from here <https://www.nerdfonts.com/font-downloads>
 
 ## Fuzzy Finder
 
@@ -176,12 +175,13 @@ now configure `ag` in `.zshrc`
 # use silver searcher (ag) plug for find files ignoring .git
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 ```
+
 ### FD
 
 Alternative version for `find`
 It is required by `Telescope` nvim plug.
 
-https://github.com/sharkdp/fd
+<https://github.com/sharkdp/fd>
 
 `brew install fd`
 
@@ -193,34 +193,3 @@ another replacement for grep, this is needed for nvim grep function
 ```bash
 brew install ripgrep
 ```
-## Appendix
-
-### Power Level 10k (obsolete)
-
-This plug was nice for a while, but the when one realize the amount of
-variables create in the environments it might not be worth it. Use starship.
-
-Power Level 10k changes the console style. Go to:
-
-https://github.com/romkatv/powerlevel10k
-
-Note: The installation with `brew` **does not work**, it can't find the installed package in the path.
-
-I install it directly from source.
-
-notice how this checks out the repo directly under `Oh my zsh` themes directory:
-
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-- enabled this plug
-- open `~/zshrc` and set
-
-  ZSH_THEME="powerlevel10k/powerlevel10k"
-
-- save the file
-- source the file with `source ~/.zshrc`
-- setup this plug with the wizard that shows up automatically. If this does not start, check out the home page on how use the command to lauch.
-
-If you want to reconfigure the style, just run assistant again:
-
-`p10k configure`

@@ -8,6 +8,7 @@ cd ~
 git clone git@github.com:Snake-Sanders/dotfiles.git
 cd dotfiles
 stow .
+ln zshrc/.zshrc ~/.zshrc
 ```
 
 To remove a file

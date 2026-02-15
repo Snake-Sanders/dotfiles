@@ -1,6 +1,6 @@
 --target=~/.config
 --ignore=.stowrc
+--ignore=.git
 --ignore=.gitignore
 --ignore=docs
 --ignore=ubuntu
---ignore=.gitignore

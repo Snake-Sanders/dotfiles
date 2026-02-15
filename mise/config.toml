@@ -2,6 +2,8 @@
 bat = "latest"
 fd = "latest"
 fzf = "latest"
+lazygit = "latest"
 ripgrep = "latest"
 starship = "latest"
 tmux = "latest"
+yazi = "latest"

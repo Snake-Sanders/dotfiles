@@ -1,24 +1,18 @@
 # iTerm2
 
 > Replaced iTerm with Ghostty
-
+<!--toc:start-->
 - [iTerm2](#iterm2)
   - [ZSH](#zsh)
   - [Color scheme](#color-scheme)
   - [Oh My Zsh](#oh-my-zsh)
   - [Nerd Fonts](#nerd-fonts)
-  - [Starship](#starship)
   - [ZSH Plugins](#zsh-plugins)
     - [ZSH syntax highlight](#zsh-syntax-highlight)
     - [ZSH Auto suggestions](#zsh-auto-suggestions)
     - [ZSH Web-search](#zsh-web-search)
   - [Fix Terminal font](#fix-terminal-font)
-  - [Fuzzy Finder](#fuzzy-finder)
-    - [FZF](#fzf)
-    - [Silver search](#silver-search)
-  - [Appendix](#appendix)
-    - [Power Level 10k (obsolete)](#power-level-10k-obsolete)
-
+<!--toc:end-->
 The default terminals on MacOS (/bin/zsh) does **not** support true colors, so better to use _iTerm2_ instead
 
 <https://iterm2.com/>
@@ -68,20 +62,6 @@ option 2:
   select the new font.
 
 - under `settings/general/selection` select `Applications in terminal may access clipboard`. This is for copying text in Tmux.
-
-## Starship
-
-I dropped Power Level 10k for Starship, the previous was convoluting the environment variables and the configuration files.
-
-<https://starship.rs/>
-
-`brew install starship`
-
-Add the following to the end of ~/.zshrc:
-
-`eval "$(starship init zsh)"`
-
-the config file goes in `~/.config/starship.toml`
 
 ## ZSH Plugins
 
@@ -147,49 +127,3 @@ Just add the plug `web-search` to the pluggins list in `~.zshrc`
 If after these steps you open termianl (/bin/zsh) and the prompt has strange characters, then go to Terminal settings change the font to `JetBrainMonoNL NFM Regular 14`
 
 This is one of the adapted fonts from here <https://www.nerdfonts.com/font-downloads>
-
-## Fuzzy Finder
-
-### FZF
-
-Install `fzf`
-
-`berew install fzf`
-
-now configure fzf in `.zshrc`
-
-```bash
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
-```
-
-### Silver search
-
-Install `ag`
-
-`berew install the_silver_searcher`
-
-now configure `ag` in `.zshrc`
-
-```bash
-# use silver searcher (ag) plug for find files ignoring .git
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
-```
-
-### FD
-
-Alternative version for `find`
-It is required by `Telescope` nvim plug.
-
-<https://github.com/sharkdp/fd>
-
-`brew install fd`
-
-### RipGrep
-
-another replacement for grep, this is needed for nvim grep function
-`<leader> + ps` which uses ripgrep underneath.
-
-```bash
-brew install ripgrep
-```

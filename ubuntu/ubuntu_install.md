@@ -1,6 +1,6 @@
 # Ubuntu installation of custom tools and configuration
 
-## Install essentials 
+## Install essentials
 
 sudo apt install stow vim git
 
@@ -12,7 +12,7 @@ With stow now you can checkout this `dotfiles` repo
 
 How to test if the fonts are installed.
 
-Open your shell's configuration file (e.g., .zshrc) and add export NERD_FONT_CHECK_AUTO=1. 
+Open your shell's configuration file (e.g., .zshrc) and add export NERD_FONT_CHECK_AUTO=1.
 Restart the terminal and run a command. If icons appear correctly, the font is installe
 export NERD_FONT_CHECK_AUTO=1
 
@@ -25,20 +25,20 @@ sudo apt install zsh
 sudo usermod -s /usr/bin/zsh $(whoami)
 
 3. Install ohmyzsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL <https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh>)"
 4. Install Zsh plugins
 
 - zsh-autosuggestions:
 
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone <https://github.com/zsh-users/zsh-autosuggestions> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 - zsh-syntax-highlighting
 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone <https://github.com/zsh-users/zsh-syntax-highlighting.git> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 ## FZF
 
-The version in ubuntu is quite old, so the keybindings CTRL + R does not work. 
+The version in ubuntu is quite old, so the keybindings CTRL + R does not work.
 Better to clone fzf and install it directly from the sources.
 
 say yes to everything, we want the keybindings.
@@ -46,8 +46,8 @@ say yes to everything, we want the keybindings.
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
 
-Silver search is used by FZF for string manipulation. See .zshrc and the 
-export variable `FZF_DEFAULT_COMMAND`. 
+Silver search is used by FZF for string manipulation. See .zshrc and the
+export variable `FZF_DEFAULT_COMMAND`.
 
     sudo apt install silversearcher-ag 
 
@@ -91,7 +91,7 @@ I am using FiraMono
 
 1. Download a Nerd Font
 
-https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraMono.zip
+<https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraMono.zip>
 
 2. Unzip and copy to ~/.fonts
 
@@ -99,7 +99,6 @@ https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraMono.zip
     cp  ~/Downloads/FiraMono/* ~/.fonts/
 
 3. Run the command fc-cache -fv to manually rebuild the font cache
-
 
 ## Lazyvim
 
@@ -150,22 +149,22 @@ See ttps://block.github.io/goose/docs/quickstart/
 ## VPN
 
 1. install the OpenVPN plugin:
-Open the terminal and run 
+Open the terminal and run
 
-    sudo apt-get install network-manager-openvpn-gnome 
+    sudo apt-get install network-manager-openvpn-gnome
 
-to install the OpenVPN integration for NetworkManager. 
+to install the OpenVPN integration for NetworkManager.
 
 2. Get configuration files:
-Download the .ovpn configuration file from your work's VPN portal or from your IT department. 
+Download the .ovpn configuration file from your work's VPN portal or from your IT department.
 
 3. Import the connection:
-Go to Settings > Network > VPN and click the + button. Select "Import from file..." and choose the .ovpn file you downloaded. 
+Go to Settings > Network > VPN and click the + button. Select "Import from file..." and choose the .ovpn file you downloaded.
 
 4. Enter credentials:
-When prompted, enter your work account username and password. 
+When prompted, enter your work account username and password.
 Connect:
-You should now see the VPN listed in your network settings. Click the toggle to connect. 
+You should now see the VPN listed in your network settings. Click the toggle to connect.
 
     sudo apt-get install network-manager-openvpn-gnome
 
@@ -174,7 +173,7 @@ You should now see the VPN listed in your network settings. Click the toggle to 
 Most of Ubuntu default shortcut conflict with neovim shortcuts. And since these
 shortcuts are different from MacOS then it is better to disable them.
 
-you can change this using the GUI, Settings -> Keyboards -> Keyboard Shortcuts 
+you can change this using the GUI, Settings -> Keyboards -> Keyboard Shortcuts
 
 - backup key shortcuts
 
@@ -204,4 +203,3 @@ Checkout the package manager called TPM:
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 Then to install all the dependencies and plugs, open tmux and press <leader> + I
-

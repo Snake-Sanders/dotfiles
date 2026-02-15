@@ -49,7 +49,7 @@ To install new tools globally, example `bat`:
 
 Once all the tools are installed it is recommended to pin them.
 
-    mise pin --all
+    mise use -g --pin bat
 
 You can check all the mise tools with:
 
@@ -62,7 +62,7 @@ I can't install `ag` so for now stays with `brew`.
 
 ### Starship
 
-I dropped Power Level 10k for Starship, the previous was convoluting the environment variables and the configuration files.
+I dropped Power Level 10k for Starship, the previous was comboluting the environment variables and the configuration files.
 
 <https://starship.rs/>
 
@@ -72,7 +72,7 @@ Add the following to the end of ~/.zshrc:
 
 `eval "$(starship init zsh)"`
 
-The config file goes in `~/.config/starship.toml`
+the config file goes in `~/.config/starship.toml`
 
 ### FZF
 

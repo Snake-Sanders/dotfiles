@@ -8,6 +8,10 @@ sudo apt install stow vim git
 
 With stow now you can checkout this `dotfiles` repo
 
+## Mise
+
+Check the tools installed by Mise, some of the tool listed below are not longer needed to be installed manually.
+
 ## Nerdfonts
 
 How to test if the fonts are installed.

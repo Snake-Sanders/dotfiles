@@ -24,6 +24,10 @@ Install the dependencies
 
 ## Install tools globally
 
+You can search for tools with:
+
+    mise tool <name>
+
 To install new tools globally, example `bat`:
 
     mise use -g bat@latest

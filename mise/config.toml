@@ -1,0 +1,7 @@
+[tools]
+bat = "latest"
+fd = "latest"
+fzf = "latest"
+ripgrep = "latest"
+starship = "latest"
+tmux = "latest"

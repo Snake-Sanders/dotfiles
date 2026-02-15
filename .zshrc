@@ -58,6 +58,7 @@ alias tree="tree -L 2"
 alias kb="sh .kanata.sh"
 
 eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
 
 # rust
 . "$HOME/.cargo/env"

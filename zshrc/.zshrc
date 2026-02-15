@@ -21,15 +21,16 @@ plugins=(zsh-autosuggestions zsh-syntax-highlighting web-search)
 
 source $ZSH/oh-my-zsh.sh
 
-# Initialize asdf version manager (required for managing programming language versions)
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 
 export EDITOR=nvim
+
+# mise must star before any other tool installed by mise
+eval "$(mise activate zsh)"
+eval "$(starship init zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -49,16 +50,11 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore ~/.config/ag/.ignore -l -g ""'
 alias ll="ls -l"
 alias la="la -la"
 alias lla="ls -la"
-alias cbe="cd /Users/mac/src/work/cm-backend"
-alias cpr="cd /Users/mac/src/work/cm-processor"
 alias exer="~/.config/tmux/exe_rust.sh"
 alias tree="tree -L 2"
 # kanata.sh lauches the command to set the home row mode: 
 # sudo kanata --cfg ~/dotfiles/.config/kanata/macbookpro14.kbd
 alias kb="sh .kanata.sh"
-
-eval "$(starship init zsh)"
-eval "$(mise activate zsh)"
 
 # rust
 . "$HOME/.cargo/env"

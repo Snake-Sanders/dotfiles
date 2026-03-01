@@ -15,7 +15,7 @@ Route zsh to the config:
 Edit `~/.zshenv` file:
 
 ```
-ZDOTDIR=$HOME/.config/zsh
+export ZDOTDIR="$HOME/.config/zsh"
 ```
 
 ## Update
@@ -24,9 +24,15 @@ To remove a file
 
 `stow -D <file_name>`
 
-To add a file
+To add a module
 
-1. put the new `x` file into `~/dotfiles/.config/`
+1. create the `fish` folder and its content into `~/dotfiles/.config/`
 2. `cd ~/dotfiles/`
-3. `stow .`
-4. check there is a link file in `~/.config/x` to `~/dotfiles/.config/x`
+3. `stow fish`
+4. check there is a link file in `~/.config/fish/config.fish` to `~/dotfiles/fish/config.fish`
+
+Example add multiple packages:
+
+```
+stow zsh git tmux
+```

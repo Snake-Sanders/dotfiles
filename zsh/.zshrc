@@ -1,75 +1,32 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# Path to oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# ZSH Framework plugin like asdf for oh-my-zsh source this script and setup completions.
 plugins=(zsh-autosuggestions zsh-syntax-highlighting web-search)
-
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# custom configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
-
 export EDITOR=nvim
+# vi mode
+set -o vi
 
-# mise must star before any other tool installed by mise
+# Activate mise (must be before using tools installed by mise)
 eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+if command -v fzf >/dev/null 2>&1; then
+  source <(fzf --zsh)
+fi
 
-# use silver searcher (ag) plug for find files
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+[ -f "$HOME/.config/shell/aliases.sh" ] && source "$HOME/.config/shell/aliases.sh"
+[ -f "$HOME/.config/shell/secrets.sh" ] && source "$HOME/.config/shell/secrets.sh"
+
+# FZF default search using ag
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore ~/.config/ag/.ignore -l -g ""'
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-# import alias and helpers
-source "$HOME/.config/shell/aliases.sh"
-source "$HOME/.config/shell/secrets.sh"
-
-# Example aliases
-alias ll="ls -l"
-alias la="la -la"
-alias lla="ls -la"
-alias exer="~/.config/tmux/exe_rust.sh"
-alias tree="tree -L 2"
-# kanata.sh lauches the command to set the home row mode: 
-# sudo kanata --cfg ~/dotfiles/.config/kanata/macbookpro14.kbd
-alias kb="sh .kanata.sh"
-
-# rust
-. "$HOME/.cargo/env"
-
-# enables vi motions in terminal
-set -o vi
-
-# Syntax higlight has to be the last configuration!
-# If you receive "highlighters directory not found" error message,
-# you may need to add the following to your.zshenv:
-# export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
-# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+# Syntax highlighting (must be last)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

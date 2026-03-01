@@ -10,7 +10,7 @@ fish_add_path -g $HOME/.local/bin
 fish_add_path -g $HOME/.cargo/bin
 fish_add_path -g $HOME/.local/bin/goose
 
-source ~/.config/fish/alias.fish
+source ~/.config/fish/aliases.fish
 source ~/.config/fish/secrets.fish
 
 # fzf + ag default command

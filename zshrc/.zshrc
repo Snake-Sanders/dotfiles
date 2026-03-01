@@ -46,6 +46,10 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore ~/.config/ag/.ignore -l -g ""'
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# import alias and helpers
+source "$HOME/.config/shell/aliases.sh"
+source "$HOME/.config/shell/secrets.sh"
+
 # Example aliases
 alias ll="ls -l"
 alias la="la -la"

@@ -6,6 +6,6 @@ fish/fish_variables
 fzf
 shell/secrets.sh
 tmux/plugins/
-zsh/.zcompdump*
-zsh/.zsh_history
-zsh/.zsh_sessions/
+.zcompdump*
+.zsh_history
+.zsh_sessions/

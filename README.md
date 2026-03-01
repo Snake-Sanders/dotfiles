@@ -15,7 +15,7 @@ Route zsh to the config:
 Edit `~/.zshenv` file:
 
 ```
-export ZDOTDIR="$HOME/.config/zsh"
+export ZDOTDIR="$HOME/.config/zsh/<OS>"
 ```
 
 ## Update

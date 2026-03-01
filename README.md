@@ -8,8 +8,17 @@ cd ~
 git clone git@github.com:Snake-Sanders/dotfiles.git
 cd dotfiles
 stow .
-ln zshrc/.zshrc ~/.zshrc
 ```
+
+Route zsh to the config:
+
+Edit `~/.zshenv` file:
+
+```
+ZDOTDIR=$HOME/.config/zsh
+```
+
+## Update
 
 To remove a file
 

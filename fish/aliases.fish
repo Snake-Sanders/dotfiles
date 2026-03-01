@@ -1,0 +1,10 @@
+alias ll "ls -l"
+alias la "ls -la"
+alias lla "ls -la"
+alias bat batcat
+alias tree "tree -L 2"
+alias kb "sh ~/.kanata.sh"
+alias work "cd ~/src/lambda"
+alias panic "~/ubuntu/panic"
+alias deepseek "ollama run deepseek-coder:6.7b"
+alias qwen3 "ollama run qwen3:8b"

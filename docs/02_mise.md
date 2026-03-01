@@ -55,6 +55,18 @@ You can check all the mise tools with:
 
     mise list
 
+## Add `.mise.toml` to a project
+
+You can add `.mise.toml` to git project to define specific tool versions.
+
+You can also add it without having to change `.gitignore`. To do so:
+
+1. `cd /path/to/repo`
+2. `echo ".mise.toml" >> .git/info/exclude`
+3. `mise use rust@1.89`
+
+`.git/info/exclude` is repo-local ignore.
+
 ## Tools
 
 Here is a list of tools that now I am installing with Mise.

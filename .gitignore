@@ -1,8 +1,10 @@
 .DS_Store
-tmux/plugins/
-.config/tmux/plugins/
 .config/karabiner/automatic_backups
-zsh/.zsh_sessions/
-zsh/.zsh_history
-zsh/.zcompdump*
+.config/tmux/plugins/
+fish/secrets.fish
 fzf
+shell/secrets.sh
+tmux/plugins/
+zsh/.zcompdump*
+zsh/.zsh_history
+zsh/.zsh_sessions/

@@ -39,7 +39,10 @@ symbol = '🔮 '
 format = "[$symbol ]($style)"
 
 [nodejs]
-disabled = true 
+disabled = true
+
+[rust]
+format = "[$symbol]($style)"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"

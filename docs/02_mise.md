@@ -62,7 +62,7 @@ I can't install `ag` so for now stays with `brew`.
 
 ### Starship
 
-I dropped Power Level 10k for Starship, the previous was comboluting the environment variables and the configuration files.
+I dropped Power Level 10k for Starship, the previous was convoluting the environment variables and the configuration files.
 
 <https://starship.rs/>
 
@@ -72,7 +72,7 @@ Add the following to the end of ~/.zshrc:
 
 `eval "$(starship init zsh)"`
 
-the config file goes in `~/.config/starship.toml`
+The config file goes in `~/.config/starship.toml`
 
 ### FZF
 
@@ -93,7 +93,7 @@ Install `ag`
 
 `berew install the_silver_searcher`
 
-now configure `ag` in `.zshrc`
+Now configure `ag` in `.zshrc`
 
 ```bash
 # use silver searcher (ag) plug for find files ignoring .git
@@ -111,7 +111,7 @@ It is required by `Telescope` nvim plug.
 
 ### RipGrep
 
-another replacement for grep, this is needed for nvim grep function
+Another replacement for grep, this is needed for nvim grep function
 `<leader> + ps` which uses ripgrep underneath.
 
 ```bash

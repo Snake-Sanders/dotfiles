@@ -1,10 +1,10 @@
 # Git
 
-If you have multiple git users, let's say one for work and one for personal 
+If you have multiple git users, let's say one for work and one for personal
 projects, you can configure Git to automatically pick the right user
 for commiting on each project.
 
-create this git config file wherever is your folder for your profesional work
+Create this git config file wherever is your folder for your profesional work
 projects, this file will be refrenced in the global configuration:
 
 `/Users/MY_USER/src/WORK/.gitconfig`
@@ -23,8 +23,8 @@ then add global configuration the following:
 ; this is the default user
 
 [user]
-	name = Snake Sanders
-	email = email@gmail.com
+ name = Snake Sanders
+ email = email@gmail.com
 
 ; If you want to add more users this is the format:
 ; Uncomment and update accordingly.
@@ -43,7 +43,7 @@ then add global configuration the following:
 
 ```
 
-To validate the configuration, close vscode, go to the project folder and 
+To validate the configuration, close vscode, go to the project folder and
 check if the working user is picked up by git.
 
 - Check user name `git config user.name`
@@ -51,17 +51,17 @@ check if the working user is picked up by git.
 
 ## Configure gitlab/github keys
 
-create a key with 
+Create a key with
 
 `ssh-keygen -t rsa"`
 
-do not add passphrase otherwise you will need to type for every 
+Do not add passphrase otherwise you will need to type for every
 git commit or git pull.
 
-If you have different users for github and gitlab then you 
+If you have different users for github and gitlab then you
 need to specify which key to use on each one.
 
-create `~/.ssh/config`
+Create `~/.ssh/config`
 
 add:
 
@@ -86,15 +86,51 @@ Host *
     IdentityFile ~/.ssh/id_rsa    
 ```
 
-ensure the access right
+Ensure the access right
 
 ```
-chmod 600 ~/.ssh/config
-chmod 600 ~/.ssh/your_gitlab_key
-chmod 600 ~/.ssh/your_github_key
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/id_ed25519
+chmod 644 ~/.ssh/id_ed25519.pub
 ```
 
-test the connection 
+Test the connection
 
 `ssh -T git@gitlab.com`
 
+## HTTPS vs SSH
+
+If the repo was checkout with the `https` protocol, no ssh keys,
+then for pushing changes we need to change the protocol to `ssh`.
+
+```
+git remote -v
+https://github.com/USER/REPO.git
+```
+
+Change to SSH
+
+```
+git remote set-url origin git@github.com:USER/REPO.git
+```
+
+Verify:
+
+```
+git remote -v
+git@github.com:USER/REPO.git
+```
+
+Make sure the keys are loaded
+
+```
+ssh-add -l
+```
+
+Then test the connection
+
+```
+ssh -T git@github.com
+```
+
+If it fail, check the permission of the key and set with `chmod`.

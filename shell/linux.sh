@@ -1,3 +1,5 @@
+tree() { command tree -L 2 "$@" }
+
 work() {
   cd "$HOME/src/lambda" "$@"
 }

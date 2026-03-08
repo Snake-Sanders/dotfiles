@@ -14,3 +14,10 @@ starship = "1.24.2"
 tmux = "3.6a"
 tree-sitter = "0.26.5"
 yazi = "26.1.22"
+
+# Bootstrap will install all necessary dependencies
+# Execute: mise run bootstrap
+[tasks.bootstrap]
+run = """
+npm install -g @mermaid-js/mermaid-cli
+"""

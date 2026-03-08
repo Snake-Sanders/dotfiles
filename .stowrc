@@ -2,6 +2,8 @@
 --ignore=.git
 --ignore=.gitignore
 --ignore=.stowrc
+--ignore=README.md
 --ignore=docs
+--ignore=shell
 --ignore=ubuntu
 --target=~/.config

@@ -2,49 +2,50 @@
 
 If you have multiple git users, let's say one for work and one for personal
 projects, you can configure Git to automatically pick the right user
-for commiting on each project.
+for committing on each project.
 
-Create this git config file wherever is your folder for your profesional work
-projects, this file will be refrenced in the global configuration:
+## Git Multi-User Setup (Work + Personal)
 
-`/Users/MY_USER/src/WORK/.gitconfig`
+- `~/.gitconfig` is your main global Git configuration.
+- Work identity goes in `~/.gitconfig` under `[user]`.
+- Personal identity goes in a separate file, e.g. `~/.gitconfig-personal`.
+- `includeIf` in `~/.gitconfig` loads the personal file only when the repo path
+matches.
+
+File: `~/.gitconfig` (default = work)
 
 ```
 [user]
-  name = MyName MySurname
-  email = my_user@company.com
+      email = employee@company.com
+      name = Employee Surname
+
+  [includeIf "gitdir:~/dotfiles/*"]
+      path = /home/user/.gitconfig-personal
+
+  ; another example
+  [includeIf "gitdir:~/Private/*"]
+      path = /home/user/.gitconfig-personal
+
+  [safe]
+      directory = /workspace
+
+  [alias]
+      st = status
+      co = checkout
+
 ```
 
-then add global configuration the following:
-
-`/Users/MY_USER/.gitconfig`
+File: `~/.gitconfig-personal` (personal = GitHub)
 
 ```
-; this is the default user
-
 [user]
- name = Snake Sanders
- email = email@gmail.com
-
-; If you want to add more users this is the format:
-; Uncomment and update accordingly.
-
-; Example for multi-user configuration
-; [includeIf "gitdir:~/Private/"]
-     path = ~/Private/.gitconfig
-
-; This is the user I have for Work
-; - WORK_DIR is not a git repo, but contains subfolders with git repos, that is 
-; why ends with /*/.
-; - Sometimes the ~/ does not work so it might need the full path.
-
-[includeIf "gitdir:/Users/MY_USER/src/WORK_DIR/*/"]
-  path = /Users/MY_USER/src/WORK_DIR/.gitconfig
-
+      email = <personal@gmail.com>
+      name = Snake Sanders
 ```
 
-To validate the configuration, close vscode, go to the project folder and
-check if the working user is picked up by git.
+Validate:
+
+Make sure in each folder the right git use is used.
 
 - Check user name `git config user.name`
 - Check user email `git config user.email`
@@ -53,13 +54,15 @@ check if the working user is picked up by git.
 
 Create a key with
 
-`ssh-keygen -t rsa"`
+`ssh-keygen -t ed25519`
 
-Do not add passphrase otherwise you will need to type for every
+- Do not add passphrase otherwise you will need to type for every
 git commit or git pull.
 
-If you have different users for github and gitlab then you
+- If you have different users for github and gitlab then you
 need to specify which key to use on each one.
+
+> Note that this step is old and it might not be needed anymore.
 
 Create `~/.ssh/config`
 

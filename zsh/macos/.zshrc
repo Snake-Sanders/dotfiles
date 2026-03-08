@@ -5,12 +5,13 @@ ZSH_THEME="robbyrussell"
 plugins=(zsh-autosuggestions zsh-syntax-highlighting web-search)
 source $ZSH/oh-my-zsh.sh
 
-# custom configuration
+# Custom configuration
 
 export LANG=en_US.UTF-8
 export EDITOR=nvim
-# vi mode
+export VISUAL="bat"
 set -o vi
+bindkey -M viins '^[[200~' bracketed-paste
 
 # Activate mise (must be before using tools installed by mise)
 eval "$(mise activate zsh)"

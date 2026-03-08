@@ -9,7 +9,8 @@ ZSH_THEME="robbyrussell"
 plugins=(zsh-autosuggestions zsh-syntax-highlighting web-search)
 source $ZSH/oh-my-zsh.sh
 DISABLE_AUTO_TITLE=true
-# custom configuration
+
+# Custom configuration
 
 # Activate mise (must be before using tools installed by mise)
 eval "$(mise activate zsh)"
@@ -23,9 +24,10 @@ fi
 # FZF default search using ag
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore ~/.config/ag/.ignore -l -g ""'
 export LANG=en_US.UTF-8
-export VISUAL="bat"
 export EDITOR="nvim"
+export VISUAL="bat"
 set -o vi
+bindkey -M viins '^[[200~' bracketed-paste
 
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 [ -f "$HOME/.config/shell/secrets.sh" ] && source "$HOME/.config/shell/secrets.sh"

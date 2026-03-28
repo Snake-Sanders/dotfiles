@@ -23,6 +23,7 @@ if command -v fzf >/dev/null 2>&1; then
 fi
 
 [[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
+[[ -f "$HOME/export-esp.sh" ]] && source "$HOME/export-esp.sh"
 [[ -f "$HOME/.config/shell/aliases.sh" ]] && source "$HOME/.config/shell/aliases.sh"
 [[ -f "$HOME/.config/shell/secrets.sh" ]] && source "$HOME/.config/shell/secrets.sh"
 

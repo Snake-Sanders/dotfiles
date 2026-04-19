@@ -7,5 +7,10 @@ return {
         args = { "--disable", "MD013", "--" },
       },
     },
+    linters_by_ft = {
+      rust = { "cspell" },
+      sh = { "cspell" },
+      markdown = { "markdownlint", "cspell" },
+    },
   },
 }

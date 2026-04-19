@@ -1,7 +1,6 @@
 [tools]
 bat = "0.26.1"
 cmake = "4.2.3"
-codex = "0.104.0"
 fd = "10.3.0"
 fzf = "0.67.0"
 lazydocker = "0.24.4"

@@ -22,3 +22,6 @@ yazi = "26.1.22"
 run = """
 npm install -g @mermaid-js/mermaid-cli
 """
+
+[settings]
+experimental = true

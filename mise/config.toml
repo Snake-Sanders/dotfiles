@@ -1,8 +1,8 @@
 [tools]
 bat = "0.26.1"
-cmake = "4.2.3"
-fd = "10.3.0"
+cmake = "4.3.1"
 delta = "latest"
+fd = "10.4.2"
 fzf = "0.71.0"
 lazydocker = "0.25.0"
 lazygit = "0.61.1"

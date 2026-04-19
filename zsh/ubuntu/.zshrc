@@ -53,3 +53,6 @@ export PATH="$GOOSE_BIN_DIR:$PATH"
 
 # Syntax highlighting (must be last)
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+

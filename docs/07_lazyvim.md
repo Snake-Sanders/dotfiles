@@ -15,6 +15,12 @@ For Git and external tool is needed
 * to avoid opening the file explorer sidebar every time lazyvim is launched, do
 not use the dot, call it just with: `nvim`.
 
+* to disable markdown preview:
+
+- run the command: `RenderMarkdown disable`
+- see also the nvim/lua/plugins/render-markdown.lua
+
+
 ## Troubleshooting
 
 * Clashing keymap

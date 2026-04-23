@@ -144,7 +144,23 @@ or
 to reattach to the session:
 `tmux attach`
 
-## Keymaps troubleshooting
+## Troubleshooting
+
+### Copy paste stops working
+
+Try killing the process
+
+```sh
+pkill xclip; pkill xsel
+```
+
+If on Wayland:
+
+```sh
+pkill wl-paste
+```
+
+### Keymaps
 
 There are two level of keymaps:
 

@@ -5,7 +5,7 @@ return {
   { "nvim-mini/mini.comment", enabled = false },
   -- autocomplete is distracting
   { "hrsh7th/nvim-cmp", enabled = false },
-  -- flash search clasesh with suround keymap
+  -- flash search clashesh with suround keymap
   { "folke/flash.nvim", enabled = false },
   -- blink autocompletion
   -- { "saghen/blink.cmp", enabled = false },

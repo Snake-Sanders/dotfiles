@@ -7,6 +7,9 @@ return {
         rust_analyzer = {
           settings = {
             ["rust-analyzer"] = {
+              files = {
+                excludeDirs = { "target", ".git", "node_modules" },
+              },
               cargo = {
                 allTargets = false,
                 buildScripts = {

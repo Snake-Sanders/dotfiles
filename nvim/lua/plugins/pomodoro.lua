@@ -1,6 +1,7 @@
 return {
   "quentingruber/pomodoro.nvim",
-  lazy = false, -- needed so the pomodoro can start at launch
+  -- needed so the pomodoro can start at launch
+  lazy = true,
   opts = {
     start_at_launch = false,
     work_duration = 25,

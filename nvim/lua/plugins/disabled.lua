@@ -7,6 +7,8 @@ return {
   { "hrsh7th/nvim-cmp", enabled = false },
   -- flash search clashesh with suround keymap
   { "folke/flash.nvim", enabled = false },
+  -- avoids crates.nvim to hit the network on every Cargo.toml open
+  { "saecki/crates.nvim", enabled = false },
   -- blink autocompletion
   -- { "saghen/blink.cmp", enabled = false },
 }

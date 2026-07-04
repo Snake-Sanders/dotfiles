@@ -3,6 +3,14 @@ return {
   opts = {
     server = {
       settings = {
+        default_settings = {
+          ["rust-analyzer"] = {
+            -- Force rust-analyzer to use the stable toolchain for analysis
+            extraEnv = { RUSTUP_TOOLCHAIN = "stable" },
+            -- Optional: Explicitly set the command if needed
+            -- command = { "rustup", "run", "stable", "rust-analyzer" },
+          },
+        },
         ["rust-analyzer"] = {
           linkedProjects = { "Cargo.toml" },
           cargo = {

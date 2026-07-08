@@ -4,13 +4,22 @@ https://herdr.dev/
 
 The replacement of tmux
 
-Install with: 
+Install:
 
+1. If Herdr was not previously installed then first do:
+  - update `~/dotfiles` with `git pull`
+  - create herdr config symlinks with `cd ~/dotfiles && stow`
+2. Install Herdr:
+
+```sh
 curl -fsSL https://herdr.dev/install.sh | sh
+```
 
-# Plugins
+3. Install the plug for neovim and hjkl navigation.
 
-Nvim and herdr naviation with hjkl
+```sh
+herdr plugin install lmilojevicc/herdr-splits.nvim
+```
 
 https://github.com/lmilojevicc/herdr-splits.nvim
 

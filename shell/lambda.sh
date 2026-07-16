@@ -49,3 +49,4 @@ gdbma() { lambda_run "$1" gdb-multiarch "${@:2}"; }
 armgdb() { lambda_run "$1" arm-none-eabi-gdb "${@:2}"; }
 armnm() { lambda_run "$1" arm-none-eabi-nm "${@:2}" -CS --size-sort; }
 armsize() { lambda_run "$1" arm-none-eabi-size -A "${@:2}"; }
+armelf() { lambda_run "$1" arm-none-eabi-readelf --all --wide --demangle=rust "${@:2}"; }

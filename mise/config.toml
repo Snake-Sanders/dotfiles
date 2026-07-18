@@ -24,7 +24,13 @@ yazi = "26.1.22"
 run = """
 npm install -g @mermaid-js/mermaid-cli
 curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
-cargo-binstall hexyl
+"""
+
+# Install utils for embedded development
+# Execute: mise run embedded
+[tasks.embedded]
+run = """
+cargo-binstall hexyl binsider
 """
 
 [settings]

@@ -33,5 +33,14 @@ run = """
 cargo-binstall hexyl binsider
 """
 
+[shell_alias]
+# applies the configured herdr layout
+herdr-layout = "herdr plugin action invoke herdr-spreader.apply"
+ll = "ls -lh"
+la = "ls -ah"
+lla = "ls -lah"
+tree = "tree -L 2 "
+kb = "$HOME/.kanata.sh"
+
 [settings]
 experimental = true

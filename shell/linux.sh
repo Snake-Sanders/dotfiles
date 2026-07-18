@@ -1,5 +1,3 @@
-tree() { command tree -L 2 "$@" }
-
 work() {
   cd "$HOME/src/lambda" "$@"
 }
@@ -25,7 +23,6 @@ deepseek() {
 qwen3() {
   command ollama run qwen3:8b "$@"
 }
-
 
 bat() {
   command batcat "$@"

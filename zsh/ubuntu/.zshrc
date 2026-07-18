@@ -33,12 +33,6 @@ bindkey -M viins '^[[200~' bracketed-paste
 [ -f "$HOME/.config/shell/secrets.sh" ] && source "$HOME/.config/shell/secrets.sh"
 [ -f "$HOME/.config/shell/linux.sh" ] && source "$HOME/.config/shell/linux.sh"
 
-# Aliases
-alias ll="ls -lh --color=auto"
-alias la="ls -lach --color=auto"
-alias lla="ls -lach --color=auto"
-
-
 # dev tools
 # arm toolchaing
 export PATH="$PATH:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin"

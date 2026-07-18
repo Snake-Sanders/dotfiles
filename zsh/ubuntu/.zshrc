@@ -13,6 +13,9 @@ DISABLE_AUTO_TITLE=true
 # Custom configuration
 
 # Activate mise (must be before using tools installed by mise)
+# auto_env can't be set in mise.toml itself (chicken-and-egg with file discovery),
+# so it must be exported before mise runs to pick up config.linux.toml on this OS
+export MISE_AUTO_ENV=1
 eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
 

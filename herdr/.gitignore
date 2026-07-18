@@ -1,5 +1,5 @@
 .tmp*/
-github/
+plugins/github/
 herdr-client.log
 herdr-client.sock
 herdr-server.log

@@ -9,6 +9,3 @@ tmux/plugins/
 .zcompdump*
 .zsh_history
 .zsh_sessions/
-/herdr/herdr-client.log
-/herdr/herdr-server.log
-/herdr/session.json

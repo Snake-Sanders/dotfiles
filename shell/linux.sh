@@ -23,7 +23,3 @@ deepseek() {
 qwen3() {
   command ollama run qwen3:8b "$@"
 }
-
-bat() {
-  command batcat "$@"
-}

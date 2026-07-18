@@ -1,4 +1,29 @@
 workspaces:
+  - name: src
+    root: ~/src/lambda
+    tabs:
+      - label: nvim
+        cwd: .
+        panes:
+          - command: nvim .
+          - split: right
+            ratio: 0.7
+  - name: repo
+    root: ~/repo/lambda
+    tabs:
+      - label: nvim
+        cwd: .
+        panes:
+          - command: nvim
+          - split: right
+            ratio: 0.7
+  - name: notes
+    root: ~/src/my/notes
+    tabs:
+      - label: notes
+        cwd: .
+        panes:
+          - command: nvim .
   - name: esp32
     root: ~/src/github/esp32/ttgo-display/rust/
     tabs:
@@ -8,3 +33,4 @@ workspaces:
           - command: nvim
           - split: right
             ratio: 0.7
+

@@ -1,0 +1,10 @@
+workspaces:
+  - name: esp32
+    root: ~/src/github/esp32/ttgo-display/rust/
+    tabs:
+      - label: nvim
+        cwd: ./src
+        panes:
+          - command: nvim
+          - split: right
+            ratio: 0.7

@@ -19,6 +19,23 @@ tree-sitter = "0.26.8"
 uv = "latest"
 yazi = "26.1.22"
 
+[dotfiles]
+"~/.config/starship.toml" = "~/dotfiles/starship.toml"
+"~/.config/mise" = "~/dotfiles/mise"
+"~/.config/zsh" = "~/dotfiles/zsh"
+"~/.config/aerospace" = "~/dotfiles/aerospace"
+"~/.config/ag" = "~/dotfiles/ag"
+"~/.config/clangd" = "~/dotfiles/clangd"
+"~/.config/cursor" = "~/dotfiles/cursor"
+"~/.config/fish" = "~/dotfiles/fish"
+"~/.config/ghostty" = "~/dotfiles/ghostty"
+"~/.config/herdr" = "~/dotfiles/herdr"
+"~/.config/kanata" = "~/dotfiles/kanata"
+"~/.config/karabiner" = "~/dotfiles/karabiner"
+"~/.config/nvim" = "~/dotfiles/nvim"
+"~/.config/tmux" = "~/dotfiles/tmux"
+"~/.config/yazi" = "~/dotfiles/yazi"
+
 # Bootstrap will install all necessary dependencies
 # Execute: mise run bootstrap
 [tasks.bootstrap]
@@ -45,3 +62,5 @@ kb = "$HOME/.kanata.sh"
 
 [settings]
 experimental = true
+dotfiles.default_mode = "symlink"
+dotfiles.root = "~/dotfiles"

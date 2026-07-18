@@ -1,6 +1,5 @@
 .DS_Store
-.config/karabiner/automatic_backups
-.config/tmux/plugins/
+karabiner/automatic_backups
 fish/secrets.fish
 fish/fish_variables
 fzf

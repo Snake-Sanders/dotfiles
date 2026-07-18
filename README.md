@@ -3,11 +3,9 @@
 Development Environment Configuration on MacOS
 
 ```
-brew install stow
 cd ~
 git clone git@github.com:Snake-Sanders/dotfiles.git
-cd dotfiles
-stow .
+mise dotfiles apply
 ```
 
 Route zsh to the config:
@@ -20,33 +18,32 @@ export ZDOTDIR="$HOME/.config/zsh/<OS>"
 
 ## Target directory
 
-There is a hidden file `dotfiles/.stowrc` indicating where to create the
-symlinks, otherwise we would need to create a folder for each module in order 
-to preserve the structure, like `dotfiles/mise/mise/`.
-Also `.stowrc` has ignore file list.
+Symlinks are managed by mise's `[dotfiles]` table in `dotfiles/mise/config.toml`,
+which maps each module to its target under `~/.config`, e.g.:
+
+```toml
+"~/.config/nvim" = "~/dotfiles/nvim"
+```
 
 ## Update
 
-To remove a file
-
-`stow -D <file_name>`
-
 To add a module
 
-`cd dotfiles && stow .`
+1. add an entry to `[dotfiles]` in `dotfiles/mise/config.toml`
+2. `mise dotfiles apply`
 
-### Alternative structure
+To remove a module
 
-Another way is by module but this does only work when the source modules are 
-already in subfolders like `dotfiles/fish/fish`.
+1. delete its entry from `[dotfiles]`
+2. `rm ~/.config/<module>` (mise won't remove existing symlinks on its own)
 
-1. create the `fish` folder and its content into `~/dotfiles/.config/`
-2. `cd ~/dotfiles/`
-3. `stow fish`
-4. check there is a link file in `~/.config/fish/config.fish` to `~/dotfiles/fish/config.fish`
+Check current state any time with `mise dotfiles status`.
 
-Example add multiple packages:
+## Migrating other machines off stow
 
-```
-stow zsh git tmux
-```
+On a machine that still has the old stow-managed symlinks, unstow *before*
+pulling — `stow -D .` needs the old `.stowrc`, which the pull removes:
+
+1. `cd ~/dotfiles && stow -D .`
+2. `git pull`
+3. `mise dotfiles apply`

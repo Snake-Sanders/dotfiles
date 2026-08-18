@@ -1,2 +1,6 @@
 [env]
 UV_PYTHON = "3.11"
+
+[tasks.qa]
+description = "Run all quality checks (fmt, clippy, test) for a Rust project"
+run = "$HOME/.config/mise/scripts/qa.sh"

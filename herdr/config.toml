@@ -2,11 +2,14 @@ onboarding = false
 [ui]
 agent_panel_sort = "spaces"
 
+[experimental]
+kitty_graphics = true
+
 [keys]
 settings = "prefix+S"
 toggle_sidebar = "prefix+e"
 edit_scrollback = "prefix+E"
-split_horizontal = "prefix+s" 
+split_horizontal = "prefix+s"
 
 # install nvim navigation plug
 # herdr plugin install lmilojevicc/herdr-splits.nvim

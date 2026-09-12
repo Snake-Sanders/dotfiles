@@ -51,6 +51,10 @@ Once all the tools are installed it is recommended to pin them.
 
     mise use -g --pin bat
 
+or pin a tool installed git cargo:
+
+    mise use -g --pin cargo:bookokrat
+
 You can check all the mise tools with:
 
     mise list

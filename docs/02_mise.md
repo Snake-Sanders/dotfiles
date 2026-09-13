@@ -45,6 +45,14 @@ To install new tools globally, example `bat`:
 
     mise use -g bat@latest
 
+To install cargo packages
+
+    mise use -g --pin cargo:bookokrat
+
+To install brew pacakages
+
+    mise use -g brew:bjarneo/cliamp/cliamp
+
 ## Pin all tools
 
 Once all the tools are installed it is recommended to pin them.

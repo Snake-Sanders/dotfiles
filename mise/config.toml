@@ -4,6 +4,7 @@ bat = "0.26.1"
 "cargo:bookokrat" = "0.3.12"
 cmake = "4.3.1"
 delta = "0.19.2"
+eza = "0.23.5"
 fd = "10.4.2"
 ffmpeg = "9.0.1"
 fzf = "0.71.0"
@@ -61,10 +62,10 @@ cargo-binstall hexyl binsider
 [shell_alias]
 # applies the configured herdr layout
 herdr-layout = "herdr plugin action invoke herdr-spreader.apply"
-ll = "ls -lh"
-la = "ls -ah"
-lla = "ls -lah"
-tree = "tree -L 2 "
+ll = "eza -lh --git"
+la = "eza -a"
+lla = "eza -lah --git"
+tree = "eza -T -L 2"
 kb = "$HOME/.kanata.sh"
 
 [settings]

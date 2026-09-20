@@ -22,6 +22,10 @@ if command -v fzf >/dev/null 2>&1; then
   source <(fzf --zsh)
 fi
 
+# atiun after fzf
+eval "$(atuin init zsh)"
+# eval last
+eval "$(starship init zsh)"
 # aliases are defined in mise
 [[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 [[ -f "$HOME/export-esp.sh" ]] && source "$HOME/export-esp.sh"

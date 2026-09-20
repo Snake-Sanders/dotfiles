@@ -81,7 +81,7 @@ You can also add it without having to change `.gitignore`. To do so:
 
 ## Tools
 
-Here is a list of tools that now I am installing with Mise.
+Here is a list of CLI tools. The majority are installed by `mise`.
 I can't install `ag` so for now stays with `brew`.
 
 ### Starship
@@ -140,4 +140,11 @@ Another replacement for grep, this is needed for nvim grep function
 
 ```bash
 brew install ripgrep
+```
+
+### Atuin
+
+
+```sh
+atuin import zsh
 ```

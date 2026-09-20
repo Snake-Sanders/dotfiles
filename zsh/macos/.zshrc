@@ -16,17 +16,18 @@ bindkey -M viins '^[[200~' bracketed-paste
 
 # Activate mise (must be before using tools installed by mise)
 eval "$(mise activate zsh)"
-eval "$(starship init zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 if command -v fzf >/dev/null 2>&1; then
   source <(fzf --zsh)
 fi
 
+eval "$(zoxide init zsh)"
 # atiun after fzf
 eval "$(atuin init zsh)"
 # eval last
 eval "$(starship init zsh)"
+
 # aliases are defined in mise
 [[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 [[ -f "$HOME/export-esp.sh" ]] && source "$HOME/export-esp.sh"

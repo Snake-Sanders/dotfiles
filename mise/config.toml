@@ -24,6 +24,7 @@ tree-sitter = "0.26.8"
 uv = "0.12.7"
 yazi = "26.1.22"
 yt-dlp = { version = "latest", rename_exe = "yt-dlp" }
+zoxide = "0.10.0"
 
 [dotfiles]
 "~/.config/starship.toml" = "~/dotfiles/starship.toml"

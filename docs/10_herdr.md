@@ -43,6 +43,16 @@ then apply the layout with:
 
 there is a shorcut in mise config to call just `herdr-layout`
 
+## Update plugin
+
+Herdr v1 has no herdr plugin update. but you can update them manually.
+After a herdr update, re-run;
+
+```sh
+herdr plugin install lmilojevicc/herdr-splits.nvim
+herdr plugin install yuk1ty/herdr-spreader
+```
+
 ## Troubleshooting
 
 if the plugins do not work try inspecting the logs:

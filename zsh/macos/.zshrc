@@ -24,7 +24,7 @@ fi
 
 eval "$(zoxide init zsh)"
 # atiun after fzf
-eval "$(atuin init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 # eval last
 eval "$(starship init zsh)"
 

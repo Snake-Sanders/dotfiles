@@ -12,18 +12,6 @@ DISABLE_AUTO_TITLE=true
 
 # Custom configuration
 
-# Activate mise (must be before using tools installed by mise)
-# auto_env can't be set in mise.toml itself (chicken-and-egg with file discovery),
-# so it must be exported before mise runs to pick up config.linux.toml on this OS
-export MISE_AUTO_ENV=1
-eval "$(mise activate zsh)"
-eval "$(starship init zsh)"
-
-# Set up fzf key bindings and fuzzy completion
-if command -v fzf >/dev/null 2>&1; then
-  source <(fzf --zsh)
-fi
-
 # FZF default search using ag
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore ~/.config/ag/.ignore -l -g ""'
 export LANG=en_US.UTF-8
@@ -31,6 +19,20 @@ export EDITOR="nvim"
 export VISUAL="bat"
 set -o vi
 bindkey -M viins '^[[200~' bracketed-paste
+
+# Activate mise (must be before using tools installed by mise)
+# auto_env can't be set in mise.toml itself (chicken-and-egg with file discovery),
+# so it must be exported before mise runs to pick up config.linux.toml on this OS
+export MISE_AUTO_ENV=1
+eval "$(mise activate zsh)"
+
+# Set up fzf key bindings and fuzzy completion
+if command -v fzf >/dev/null 2>&1; then
+  source <(fzf --zsh)
+fi
+
+# eval last
+eval "$(starship init zsh)"
 
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 [ -f "$HOME/.config/shell/secrets.sh" ] && source "$HOME/.config/shell/secrets.sh"

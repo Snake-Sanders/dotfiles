@@ -32,6 +32,9 @@ if command -v fzf >/dev/null 2>&1; then
   source <(fzf --zsh)
 fi
 
+eval "$(zoxide init zsh)"
+# atiun after fzf
+eval "$(atuin init zsh --disable-up-arrow)"
 # eval last
 eval "$(starship init zsh)"
 

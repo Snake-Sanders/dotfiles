@@ -6,7 +6,8 @@ export PATH="$HOME/.local/bin:$PATH"
 # Path to oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+# keep zsh-syntax-highlighting last in the plugin list
+plugins=(zsh-autosuggestions web-search zsh-syntax-highlighting )
 source $ZSH/oh-my-zsh.sh
 DISABLE_AUTO_TITLE=true
 

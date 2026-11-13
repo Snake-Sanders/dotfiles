@@ -2,6 +2,7 @@
 atuin = "18.22.0"
 bat = "0.26.1"
 "cargo:bookokrat" = "0.3.12"
+cliamp = "2.2.0"
 cmake = "4.3.1"
 delta = "0.19.2"
 eza = "0.23.5"
